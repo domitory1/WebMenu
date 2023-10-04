@@ -1,0 +1,36 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 18px;
+	color: var(--tg-them-dg-color);
+	background: var(--tg-theme-dg-color);
+}
+
+.container{
+	max-width: 390px;
+	overflow: hidden;
+	border: 1px solid red;
+}
+
+.header{
+	border: 1px solid rgb(255, 242, 0);
+}
+
+.swipeWrapper{
+	margin: 0;
+	padding: 0px;
+	border: 1px solid blue;
+	list-style-type: none;
+	display: flex;
+	transition: transform 0.3s ease-in-out;
+}
+
+
+.swipeItem{
+	margin: 0px 5px 0px 5px;
+	border-radius: 30px;
+	flex: 0 0 auto;
+	padding: 0px 10px 0px 10px;
+	border: 1px solid #780d9c;
+}
+
