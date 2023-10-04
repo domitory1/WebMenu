@@ -8,15 +8,16 @@ body{
 
 .container{
 	max-width: 390px;
+	min-height: 390px;
 	overflow: hidden;
 	border: 1px solid red;
 }
 
-.header{
+.swipe-container{
 	border: 1px solid rgb(255, 242, 0);
 }
 
-.swipeWrapper{
+.swipe-wrapper{
 	margin: 0;
 	padding: 0px;
 	border: 1px solid blue;
@@ -26,7 +27,7 @@ body{
 }
 
 
-.swipeItem{
+.swipe-item{
 	margin: 0px 5px 0px 6px;
 	border-radius: 30px;
 	flex: 0 0 auto;
