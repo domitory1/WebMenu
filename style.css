@@ -5,12 +5,17 @@ html, body{
 	color: #fff;
 	font-size: 17px;
 }
-.slick-list{
+.header{
+	border-bottom: 1px solid rgb(108, 103, 102);
+}
+
+.slick-list{/*блок, который заставляет скользить внутренние блоки*/
 	height: 50px;
-	border: 2px solid rgb(215, 215, 9);
 	overflow: hidden;
+	display: flex;
 }
 .slick-track{
+   margin: auto;
 	display: flex;
 }
 .slider__item{
