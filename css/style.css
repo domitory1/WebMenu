@@ -2,9 +2,10 @@ html,
 body{
 	margin: 0;
 	max-width: 390px;
+	color: var(--tg-theme-text-color);
 	color: white;
-	background-color: #333;
-	font-size: 17px;
+	background-color: var(--tg-theme-bg-color);
+	font-size: var(--bs-body-font-size);
 }
 .header{
 	overflow: hidden;
