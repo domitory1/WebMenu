@@ -4,6 +4,7 @@ body{
 	background-color: #333;
 }
 .header{
+	overflow: hidden;
 	border: 1px solid red;
 }
 .menu-slider{
