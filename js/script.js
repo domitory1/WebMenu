@@ -1,3 +1,5 @@
 new Swiper('.menu-slider', {
-	freeMode: true
+	freeMode: true,
+	autoWidth: true,
+	slidesPerView: 'auto',
 });

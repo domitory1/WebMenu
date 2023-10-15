@@ -1,20 +1,23 @@
 html,
 body{
+	color: white;
 	background-color: #333;
 }
-.wrapper{
-	padding: 30px;
-	min-height: 100%;
-	border: 1px solid rgb(1, 154, 73);
+.header{
+	border: 1px solid red;
 }
 .menu-slider{
-	border: 1px solid rgb(88, 10, 172);
+	border: 1px solid rgb(200, 180, 197);
+}
+
+.menu-slider_slide{
+	border: 1px solid rgb(115, 0, 255);
 }
 .menu-slider__menu{
-	border: 1px solid rgb(140, 7, 138);
-	text-align: center;
-	max-width: 100%;
+	border-radius: 10px;
+	padding: 0px 10px 0px 10px;
+	border: 1px solid rgb(0, 255, 85);
 }
 .menu-slider .swiper-slide{
-	border: 1px solid rgb(159, 193, 8);
+	width: auto;
 }
