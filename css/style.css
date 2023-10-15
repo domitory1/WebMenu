@@ -1,5 +1,7 @@
 html,
 body{
+	margin: 0;
+	max-width: 390px;
 	color: white;
 	background-color: #333;
 }
@@ -22,6 +24,7 @@ body{
 	border: 1px solid rgb(0, 255, 85);
 }
 .menu-slider__menu-img{
+	margin-right: 2px;
 	border: 1px solid rgb(47, 125, 250);
 }
 
