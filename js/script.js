@@ -1,7 +1,3 @@
-$(document).ready(function(){
-	$('.slider').slick({
-		arrows: false,
-		infinite: false,
-		variableWidth: true
-	});
+new Swiper('.menu-slider', {
+	freeMode: true
 });
