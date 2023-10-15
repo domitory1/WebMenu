@@ -14,9 +14,18 @@ body{
 	border: 1px solid rgb(115, 0, 255);
 }
 .menu-slider__menu{
-	border-radius: 10px;
+	border-radius: 15px;
 	padding: 0px 10px 0px 10px;
+	height: 20px;
+	display: flex;
 	border: 1px solid rgb(0, 255, 85);
+}
+.menu-slider__menu-img{
+	border: 1px solid rgb(47, 125, 250);
+}
+
+.menu-slider__menu-text{
+	border: 1px solid rgb(47, 125, 250);
 }
 .menu-slider .swiper-slide{
 	width: auto;
