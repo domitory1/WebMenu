@@ -4,33 +4,29 @@ body{
 	max-width: 390px;
 	color: white;
 	background-color: #333;
+	font-size: 17px;
 }
 .header{
 	overflow: hidden;
-	border: 1px solid red;
-}
-.menu-slider{
-	border: 1px solid rgb(200, 180, 197);
+	border-bottom: 1px solid #555555;
 }
 
 .menu-slider_slide{
 	padding: 5px 0px 5px 0px;
-	border: 1px solid rgb(115, 0, 255);
 }
 .menu-slider__menu{
-	border-radius: 15px;
-	padding: 0px 10px 0px 10px;
-	height: 20px;
+	border-radius: 16px;
+	padding: 0px 16px 0px 16px;
+	height: 30px;
 	display: flex;
-	border: 1px solid rgb(0, 255, 85);
+	background-color: #12adf5;
 }
 .menu-slider__menu-img{
-	margin-right: 2px;
-	border: 1px solid rgb(47, 125, 250);
+	padding: 3px;
+	margin-right: 4px;
 }
-
 .menu-slider__menu-text{
-	border: 1px solid rgb(47, 125, 250);
+	padding-top: 2px;
 }
 .menu-slider .swiper-slide{
 	width: auto;
