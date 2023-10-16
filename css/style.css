@@ -3,32 +3,30 @@ body{
 	margin: 0;
 	max-width: 390px;
 	color: var(--tg-theme-text-color);
-	color: white;
 	background-color: var(--tg-theme-bg-color);
 	font-size: var(--bs-body-font-size);
 }
 .header{
-	overflow: hidden;
 	border-bottom: 1px solid #555555;
+	overflow: hidden;
 }
-
 .menu-slider_slide{
-	padding: 5px 0px 5px 0px;
+	height: 54px;
+	padding: 10px 0px 10px 0px;
 }
 .menu-slider__menu{
 	border-radius: 16px;
 	padding: 0px 16px 0px 16px;
-	height: 30px;
+	margin-left: 3px;
 	display: flex;
-	background-color: #12adf5;
-}
-.menu-slider__menu-img{
-	padding: 3px;
-	margin-right: 4px;
+	background-color: rgb(25, 191, 246);
 }
 .menu-slider__menu-text{
 	padding-top: 2px;
 }
 .menu-slider .swiper-slide{
 	width: auto;
+}
+.header a{
+	color: aliceblue;
 }
