@@ -3,30 +3,21 @@ body{
 	margin: 0;
 	max-width: 390px;
 	color: var(--tg-theme-text-color);
-	background-color: var(--tg-theme-bg-color);
-	font-size: var(--bs-body-font-size);
+	background-color: #ffff;
+	font-size: 1rem;
 }
 .header{
+	padding: 10px;
 	border-bottom: 1px solid #555555;
-	overflow: hidden;
 }
-.menu-slider_slide{
-	height: 54px;
-	padding: 10px 0px 10px 0px;
+.header .categoryCell{
+	margin: 3px;
+	padding: 3px 16px 3px 16px;
+	border:1px solid rgb(246, 115, 8);
 }
-.menu-slider__menu{
+.header .categoryCell.is-nav-selected {
+	transition: all ease 0.1s;
 	border-radius: 16px;
-	padding: 0px 16px 0px 16px;
-	margin-left: 3px;
-	display: flex;
-	background-color: rgb(25, 191, 246);
-}
-.menu-slider__menu-text{
-	padding-top: 2px;
-}
-.menu-slider .swiper-slide{
-	width: auto;
-}
-.header a{
-	color: aliceblue;
-}
+	background: rgb(51, 144, 236);
+	color: rgb(255, 255, 255);
+ }
