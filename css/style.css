@@ -13,11 +13,10 @@ body{
 .header .categoryCell{
 	margin: 3px;
 	padding: 3px 16px 3px 16px;
-	border:1px solid rgb(246, 115, 8);
 }
 .header .categoryCell.is-nav-selected {
 	transition: all ease 0.1s;
 	border-radius: 16px;
 	background: rgb(51, 144, 236);
 	color: rgb(255, 255, 255);
- }
+}

@@ -8,5 +8,5 @@ new Flickity('.header',{
 new Flickity('.container',{
 	freeScroll: true,
 	prevNextButtons: false,
+	pageDots: false,
 });
-
