@@ -1,7 +1,6 @@
 html,
 body{
 	margin: 0;
-	max-width: 390px;
 	color: var(--tg-theme-text-color);
 	background-color: #ffff;
 	font-size: 1rem;
@@ -19,4 +18,18 @@ body{
 	border-radius: 16px;
 	background: rgb(51, 144, 236);
 	color: rgb(255, 255, 255);
+}
+.container{
+	height: 550px;
+	transform: rotate(90deg) translate(0px, -100%);
+	transform-origin: left top;
+	height: 100%;
+	border: 2px solid red;
+}
+.container .categoryCell .is-vertical{
+	transform: rotate(-90deg) translate(0px, 65px);
+	margin: 62px;
+	transform-origin: center;
+	width: 400px;
+	border: 2px solid #ffb700;
 }
