@@ -1,6 +1,7 @@
 new Flickity('.container',{
 	prevNextButtons: false,
 	pageDots: false,
+	freeScroll: true,
 	contain: true,
 });
 

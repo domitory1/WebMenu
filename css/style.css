@@ -20,13 +20,15 @@ body{
 	color: rgb(255, 255, 255);
 }
 .container{
+	max-height: 600px;
 	position: absolute;
-	left: 50%;/*справо - лево*/
-	transform-origin: left;
-	transform: rotate(90deg) translate(0px/*y*/, 0px/*x*/);
+	left: 50%;
+	transform-origin: left  top;
+	transform: rotate(90deg) translate(0%, -50%);
 	border: 2px solid red;
 }
 .container .categoryCell .is-vertical{
+	max-width: 525px;
 	transform: rotate(-90deg);
 	border: 2px solid #ffb700;
 }
