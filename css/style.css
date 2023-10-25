@@ -1,34 +1,36 @@
 html,
 body{
-	margin: 0;
-	color: var(--tg-theme-text-color);
-	background-color: #ffff;
 	font-size: 1rem;
+	padding: 0px 10px 0px 10px;
+	color: black;
+	background-color: white;
+	
 }
 .header{
+	position: fixed;
+	min-width: 100%;
+	top: 0;
+	margin-top: 0;
 	padding: 10px;
+	background-color: white;
 	border-bottom: 1px solid #555555;
 }
-.header .categoryCell{
+.slider .categoryName{
 	margin: 3px;
 	padding: 3px 16px 3px 16px;
 }
-.header .categoryCell.is-nav-selected {
+.slider  .categoryName a{
+	color: black;
+	text-decoration: none;
+}
+.slider  .categoryName.is-selected {
 	transition: all ease 0.1s;
 	border-radius: 16px;
 	background: rgb(51, 144, 236);
-	color: rgb(255, 255, 255);
+}
+.slider  .categoryName.categoryName.is-selected a{
+	color: white;
 }
 .container{
-	max-height: 600px;
-	position: absolute;
-	left: 50%;
-	transform-origin: left  top;
-	transform: rotate(90deg) translate(0%, -50%);
-	border: 2px solid red;
-}
-.container .categoryCell .is-vertical{
-	max-width: 525px;
-	transform: rotate(-90deg);
-	border: 2px solid #ffb700;
+	margin-top: 55px;
 }
