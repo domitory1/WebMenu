@@ -10,13 +10,12 @@
 <body>
 	<div class="header">
 		<div class="slider">
-		<div class="categoryName is-selected"><a href="#categoryCell_1">🥘 Горячие блюда</a></div>
-		<div class="categoryName"><a href="#categoryCell_2">🍔 Бургеры</a></div>
-		<div class="categoryName"><a href="#categoryCell_3">🥗 Салаты</a></div>
-		<div class="categoryName"><a href="#categoryCell_4">🍮Десерты</a></div>
+			<a href="#categoryCell_1" class="categoryName is-selected" onclick="smoothScroll('#categoryCell_1')">🥘 Горячие блюда</a>
+			<a href="#categoryCell_2" class="categoryName" onclick="smoothScroll('#categoryCell_2')">🍔 Бургеры</a>
+			<a href="#categoryCell_3" class="categoryName" onclick="smoothScroll('#categoryCell_3')">🥗 Салаты</a>
+			<a href="#categoryCell_4" class="categoryName" onclick="smoothScroll('#categoryCell_4')">🍮Десерты</a>
+		</div>
 	</div>
-	</div>
-	<!--Слайдер-->
 
 	<div class="container">
 		<div class="categoryCell" id="categoryCell_1">
@@ -112,7 +111,7 @@
 			</div>
 		</div>
 	</div>
-	
+
 	<script src="js/flickity.pkgd.min.js"></script>
 	<script src="js/script.js"></script>
 </body>

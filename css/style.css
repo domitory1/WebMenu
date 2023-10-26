@@ -4,33 +4,31 @@ body{
 	padding: 0px 10px 0px 10px;
 	color: black;
 	background-color: white;
-	
+	scroll-behavior: smooth;
 }
 .header{
 	position: fixed;
 	min-width: 100%;
 	top: 0;
-	margin-top: 0;
 	padding: 10px;
 	background-color: white;
 	border-bottom: 1px solid #555555;
 }
-.slider .categoryName{
-	margin: 3px;
+.header a{
+	margin-left: 3px;
 	padding: 3px 16px 3px 16px;
-}
-.slider  .categoryName a{
 	color: black;
 	text-decoration: none;
 }
-.slider  .categoryName.is-selected {
-	transition: all ease 0.1s;
+.header a.is-selected{
+	transition: all ease 0.4s;
 	border-radius: 16px;
-	background: rgb(51, 144, 236);
-}
-.slider  .categoryName.categoryName.is-selected a{
 	color: white;
+	background: rgb(51, 144, 236);
 }
 .container{
 	margin-top: 55px;
+}
+.container p{
+	color: #707579;
 }
