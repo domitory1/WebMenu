@@ -1,17 +1,22 @@
 //Слайдер
 var header = new Flickity('.slider',{
-	contain: true,
 	freeScroll: true,
+	contain: true,
 	prevNextButtons: false,
 	pageDots: false,
 });
 
-//Центрирование слайда
+//Центрирование слайда и удаление/добавление класса 'is-nav-selected'
 var slides = document.querySelectorAll('.categoryName');
 slides.forEach(function(slide, index){
 	slide.addEventListener('click', function(){
+		slides.forEach(function(slide) {
+			slide.classList.remove('is-nav-selected');
+		 });
+
+		slide.classList.add('is-nav-selected');
 		header.select(index);
-		header.scrollToCell(index, true, true);
+		header.scrollToCell(index, true, true); 
 	});
 });
 
@@ -21,7 +26,7 @@ function smoothScroll(target) {
 	const startPosition = window.scrollY;
 	const targetPosition = targetElement.getBoundingClientRect().top + startPosition;
 	const distance = targetPosition - startPosition;
-	const duration = 700; // Длительность анимации в миллисекундах
+	const duration = 400; // Длительность анимации в миллисекундах
 	let startTime = null;
  
 	function animation(currentTime) {
