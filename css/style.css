@@ -15,9 +15,11 @@ body{
 	top: 0;
 	left: 0;
 	padding: 10px;
-	padding-left: 0px; 
 	background-color: white;
 	border-bottom: 1px solid #555555;
+}
+.slider{
+	padding-right: 20px; /*Без этой хрени слайдер не работает корректно*/
 }
 .header a{
 	margin-left: 3px;
@@ -35,6 +37,7 @@ body{
 	margin-top: 55px;
 }
 .container p{
+	margin-right: 10px;
 	font-size: 14px;
 	color: #707579;
 }
