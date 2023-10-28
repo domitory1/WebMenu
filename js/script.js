@@ -1,5 +1,3 @@
-let tg = window.Telegram.WebApp;
-
 //Слайдер
 var header = new Flickity('.slider',{
 	freeScroll: true,

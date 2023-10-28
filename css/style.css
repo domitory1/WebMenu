@@ -25,14 +25,13 @@ body{
 	text-decoration: none;
 }
 .header a.is-nav-selected{
-	transition: all ease 0.2s;
+	transition: all ease 0.28s;
 	border-radius: 16px;
 	color: white;
 	background: rgb(51, 144, 236);
 }
 .container{
 	margin-top: 55px;
-	max-width: 390px;
 }
 .container p{
 	font-size: 14px;
@@ -47,7 +46,7 @@ body{
 	margin-bottom: 10px;
 	border-radius: 10px;
 	overflow: hidden;
-	box-shadow: 0px 0px 30px 5px rgba(255, 255, 255, 0.554);
+	box-shadow: 0px 0px 30px 5px rgba(138, 138, 138, 0.554);
 	border: 1px solid rgb(213, 213, 213);
 }
 .cardProduct img{
