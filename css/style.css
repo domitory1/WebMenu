@@ -4,6 +4,10 @@ body{
 	padding: 0px 10px 0px 10px;
 	color: black;
 	background-color: white;
+	font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+::-webkit-scrollbar{
+	width: 0;
 }
 .header{
 	position: fixed;
@@ -28,7 +32,12 @@ body{
 }
 .container{
 	margin-top: 55px;
+	max-width: 390px;
 }
 .container p{
 	color: #707579;
+}
+.categoryCell{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 }

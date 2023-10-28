@@ -6,15 +6,15 @@ var header = new Flickity('.slider',{
 	pageDots: false,
 });
 
-//Центрирование слайда и удаление/добавление класса 'is-nav-selected'
+//Центрирование слайда и удаление и добавление класса 'is-nav-selected'
 var slides = document.querySelectorAll('.categoryName');
 slides.forEach(function(slide, index){
 	slide.addEventListener('click', function(){
 		slides.forEach(function(slide) {
 			slide.classList.remove('is-nav-selected');
 		 });
-
 		slide.classList.add('is-nav-selected');
+		
 		header.select(index);
 		header.scrollToCell(index, true, true); 
 	});
@@ -50,3 +50,14 @@ function smoothScroll(target) {
  
 	requestAnimationFrame(animation);
  }
+
+var categoryCells = document.querySelectorAll('[id^="categoryCell"]');
+
+window.addEventListener('scroll', function() {
+  categoryCells.forEach(function(cell) {
+    var cellTop = cell.getBoundingClientRect().top;
+    if (window.scrollY >= cellTop) {
+      console.log('Прокрутили к элементу с идентификатором ' + cell.id);
+    }
+  });
+});
