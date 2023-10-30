@@ -19,7 +19,7 @@ body{
 	border-bottom: 1px solid #adadad;
 }
 .slider{
-	padding-right: 20px; /*Без этой хрени слайдер не работает корректно*/
+	padding-right: 20px;
 }
 .header a{
 	margin-left: 3px;
@@ -27,8 +27,12 @@ body{
 	color: black;
 	text-decoration: none;
 }
+.header a:last-child{
+	margin-right: 3px;
+}
 .header a.is-nav-selected{
-	transition: all ease 0.28s;
+	transition: all ease 0.25s;
+	transition-delay: 50ms;
 	border-radius: 16px;
 	color: white;
 	background: rgb(51, 144, 236);

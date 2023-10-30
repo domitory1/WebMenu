@@ -6,33 +6,30 @@ var slider = new Flickity('.slider',{
 	pageDots: false,
 });
 
-// Центрирование слайда и удаление и добавление класса 'is-nav-selected' при тапе на якорь
-var slides = document.querySelectorAll('.categoryName');
-slides.forEach(function(slide, index){
-	slide.addEventListener('click', function(){
-		slides.forEach(function(slide) {
-			slide.classList.remove('is-nav-selected');
-		 });
-		slide.classList.add('is-nav-selected');
-		slider.select(index);
-		//slider.scrollToCell(index, true, true); 
-	});
+const slides = document.querySelectorAll('.categoryName');
+slides.forEach((slide, index) => {
+  slide.addEventListener('click', () => {
+    slides.forEach((slide) => {
+      slide.classList.remove('is-nav-selected');
+    });
+    slide.classList.add('is-nav-selected');
+    slider.select(index);
+  });
 });
 
-// Центрирование слайда и удаление и добавление класса 'is-nav-selected' при скроле страницы
-var categoryCells = document.querySelectorAll('[id^="categoryCell_"]');
-window.addEventListener('scroll', function() {
-	categoryCells.forEach(function(cell) {
-		var cellTop = cell.getBoundingClientRect().top;
-		if (window.innerHeight/2 >= Math.abs(cellTop)){
-			var cellIndex = Array.from(categoryCells).indexOf(cell);
-			slider.select(cellIndex);
-			slides.forEach(function(slide) {
-				slide.classList.remove('is-nav-selected');
-			});
-			slider.selectedElement.classList.add('is-nav-selected');
-		}
-	});
+const categoryCells = document.querySelectorAll('[id^="categoryCell_"]');
+window.addEventListener('scroll', () => {
+  categoryCells.forEach((cell) => {
+    const cellTop = cell.getBoundingClientRect().top;
+    if (window.innerHeight / 2 >= Math.abs(cellTop)) {
+      const cellIndex = Array.from(categoryCells).indexOf(cell);
+      slides.forEach((slide) => {
+        slide.classList.remove('is-nav-selected');
+      });
+      slides[cellIndex].classList.add('is-nav-selected');
+      slider.select(cellIndex);
+    }
+  });
 });
 
 // Плавный переход по якорям
@@ -41,7 +38,7 @@ function smoothScroll(target) {
 	const startPosition = window.scrollY;
 	const targetPosition = targetElement.getBoundingClientRect().top + startPosition;
 	const distance = targetPosition - startPosition;
-	const duration = 500; // Длительность анимации в миллисекундах
+	const duration = 200; // Длительность анимации в миллисекундах
 	let startTime = null;
  
 	function animation(currentTime) {
