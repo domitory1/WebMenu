@@ -32,7 +32,7 @@ body{
 }
 .header a.is-nav-selected{
 	transition: all ease 0.25s;
-	transition-delay: 50ms;
+	transition-delay: 100ms;
 	border-radius: 16px;
 	color: white;
 	background: rgb(51, 144, 236);
