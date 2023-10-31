@@ -25,7 +25,7 @@ const categoryCells = document.querySelectorAll('[id^="categoryCell_"]');
 window.addEventListener('scroll', () => {
   categoryCells.forEach((cell) => {
     const cellTop = cell.getBoundingClientRect().top;
-    if (window.innerHeight / 2 >= Math.abs(cellTop)) {
+    if (window.innerHeight / 2.5 >= Math.abs(cellTop)) {
       const cellIndex = Array.from(categoryCells).indexOf(cell);
       slides.forEach((slide) => {
         slide.classList.remove('is-nav-selected');
