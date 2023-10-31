@@ -42,7 +42,7 @@ function smoothScroll(target) {
 	const startPosition = window.scrollY;
 	const targetPosition = targetElement.getBoundingClientRect().top + startPosition;
 	const distance = targetPosition - startPosition;
-	const duration = 200; // Длительность анимации в миллисекундах
+	const duration = 500; // Длительность анимации в миллисекундах
 	let startTime = null;
  
 	function animation(currentTime) {
