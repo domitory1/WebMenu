@@ -6,6 +6,8 @@ var slider = new Flickity('.slider',{
 	pageDots: false,
 });
 
+// Центривание слайда слайдера flickity при ТАПЕ, добавление ему класса 'is-nav-selected'
+// (+удаление класса 'is-nav-seleted' у всех слайдов до центровки и добавления класса)
 const slides = document.querySelectorAll('.categoryName');
 slides.forEach((slide, index) => {
   slide.addEventListener('click', () => {
@@ -17,6 +19,8 @@ slides.forEach((slide, index) => {
   });
 });
 
+// Центривание слайда слайдера flickity при СКРОЛЕ страницы, добавление ему класса 'is-nav-selected' 
+// (+удаление класса 'is-nav-seleted' у всех слайдов до центровки слайда и добавления ему класса)
 const categoryCells = document.querySelectorAll('[id^="categoryCell_"]');
 window.addEventListener('scroll', () => {
   categoryCells.forEach((cell) => {
