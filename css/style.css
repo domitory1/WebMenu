@@ -27,6 +27,7 @@ body{
 	margin-left: 3px;
 	padding: 6px 16px 6px 16px;
 	color: var(--tg-theme-text-color);
+	background: var(--tg-theme-bg-color);
 	text-decoration: none;
 }
 .header a:last-child{
