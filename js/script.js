@@ -1,3 +1,5 @@
+tg = window.Telegram.WebApp;
+
 // Слайдер
 var slider = new Flickity('.slider',{
 	freeScroll: true,
@@ -7,63 +9,51 @@ var slider = new Flickity('.slider',{
 	pageDots: false,
 });
 
-// Центривание слайда слайдера flickity при ТАПЕ, добавление ему класса 'is-nav-selected'
-// (+удаление класса 'is-nav-seleted' у всех слайдов до центровки и добавления класса)
-const slides = document.querySelectorAll('.categoryName');
-slides.forEach((slide, index) => {
-  slide.addEventListener('click', () => {
-    slides.forEach((slide) => {
-      slide.classList.remove('is-nav-selected');
-    });
-    slide.classList.add('is-nav-selected');
-    slider.select(index);
-  });
-});
-
-// Центривание слайда слайдера flickity при СКРОЛЕ страницы, добавление ему класса 'is-nav-selected' 
-// (+удаление класса 'is-nav-seleted' у всех слайдов до центровки слайда и добавления ему класса)
-const categoryCells = document.querySelectorAll('[id^="categoryCell_"]');
-window.addEventListener('scroll', () => {
-  categoryCells.forEach((cell) => {
-    const cellTop = cell.getBoundingClientRect().top;
-    if (window.innerHeight / 2.5 >= Math.abs(cellTop)) {
-      const cellIndex = Array.from(categoryCells).indexOf(cell);
-      slides.forEach((slide) => {
-        slide.classList.remove('is-nav-selected');
-      });
-      slides[cellIndex].classList.add('is-nav-selected');
-      slider.select(cellIndex);
-    }
-  });
-});
-
-// Плавный переход по якорям
-function smoothScroll(target) {
-	const targetElement = document.querySelector(target);
-	const startPosition = window.scrollY;
-	const targetPosition = targetElement.getBoundingClientRect().top + startPosition;
-	const distance = targetPosition - startPosition;
-	const duration = 500; // Длительность анимации в миллисекундах
-	let startTime = null;
- 
-	function animation(currentTime) {
-	  if (startTime === null) {
-		 startTime = currentTime;
-	  }
-	  const elapsedTime = currentTime - startTime;
-	  const scrollY = ease(elapsedTime, startPosition, distance, duration);
-	  window.scrollTo(0, scrollY);
-	  if (elapsedTime < duration) {
-		 requestAnimationFrame(animation);
-	  }
-	}
- 
-	function ease(t, b, c, d) {
-	  t /= d / 2;
-	  if (t < 1) return c / 2 * t * t + b;
-	  t--;
-	  return -c / 2 * (t * (t - 2) - 1) + b;
-	}
- 
-	requestAnimationFrame(animation);
+function getCurrentICatalogNav() {
+	$('.categoryElem').each(function(i, elem) {
+		if(getActiveICatalogNav('#'+$(this).attr('id'))) {
+			
+			if(slider.selectedIndex != i) {
+				let current = $(this).attr('id');
+				delActiveICatalogNav();
+				$('.slider a[href="#'+current+'"]').addClass('active');
+				slider.select(i);
+			}
+			//return false;
+		}
+	});
 }
+function delActiveICatalogNav() {
+	$('.slider a').each(function() {
+		$(this).removeClass('active');
+	})
+}
+function getActiveICatalogNav(target) {
+	let w = $(window);
+	let t = $(target);
+	let wt = w.scrollTop(); 
+	let wh = w.height()- tg.viewportHeight / 2; 
+	let eh = t.outerHeight(); 
+	let et = t.offset().top;
+	if (wt + wh >= et && wt + wh - eh * 2 <= et + (wh - eh)){
+		return true;
+	} else {
+		return false;    
+	}
+}
+
+$("body").on('click', '[href*="#"]', function(e){
+	e.preventDefault();
+	e.stopImmediatePropagation();
+	let fixed_offset = 100;
+	tg.HapticFeedback.selectionChanged(function() {});
+	//$(this).addClass('active');
+	$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
+	//getCurrentICatalogNav();
+	
+});
+
+
+$(window).scroll(function(){
+	getCurrentICatalogNav();
+});
