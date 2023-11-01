@@ -69,7 +69,6 @@ body{
 	margin: 0;
 	font-size: 16px;
 	padding: 0px 5px 0px 5px;
-	color: var(--tg-theme-text-color);
 }
 .cardProduct p{
 	font-size: 14px;
