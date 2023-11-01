@@ -7,25 +7,25 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/flickity.min.css"/>
 	<script src="https://telegram.org/js/telegram-web-app.js"></script>
-
+	<script src="js/jquery.min.js"></script>
 </head>
 <body>
 	<div class="header">
 		<div class="slider">
-			<a href="#categoryCell_1" class="categoryName is-nav-selected" onclick="smoothScroll('#categoryCell_1')" onclick="selectCategory(this)">🥘 Горячие блюда</a>
-			<a href="#categoryCell_2" class="categoryName" onclick="smoothScroll('#categoryCell_2')" onclick="selectCategory(this)">🍔 Бургеры</a>
-			<a href="#categoryCell_3" class="categoryName" onclick="smoothScroll('#categoryCell_3')" onclick="selectCategory(this)">🥗 Салаты</a>
-			<a href="#categoryCell_4" class="categoryName" onclick="smoothScroll('#categoryCell_4')" onclick="selectCategory(this)">🍮 Десерты</a>
+			<a href="#categoryCell_1" class="categoryName active">🥘 Горячие блюда</a>
+			<a href="#categoryCell_2" class="categoryName">🍔 Бургеры</a>
+			<a href="#categoryCell_3" class="categoryName">🥗 Салаты</a>
+			<a href="#categoryCell_4" class="categoryName">🍮 Десерты</a>
 		</div>
 	</div>
 
 	<div class="container">
-		<h2 id="categoryCell_1">🥘 Горячие блюда</h2>
+		<h2>🥘 Горячие блюда</h2>
 		<p class="description_category">
 			Мы предлагаем вам самые свежие и вкусные блюда, которые точно порадуют 
 			вас и ваших близких
 		</p>
-		<div class="categoryCell">
+		<div id="categoryCell_1" class="categoryElem">
 			<div class="cardProduct">
 				<picture>
 					<img src="img/img.jpeg">
@@ -75,13 +75,13 @@
 				</div>
 			</div>
 		</div>
-		<h2 id="categoryCell_2">🍔 Бургеры</h2>
+		<h2>🍔 Бургеры</h2>
 		<p class="description_category">
 			Мы предлагаем вам самые сочные и аппетитные гамбургеры, которые вы 
 			когда-либо пробовали. Наш секрет - только свежие ингредиенты и мастерство наших 
 			поваров.
 		</p>
-		<div class="categoryCell">
+		<div id="categoryCell_2" class="categoryElem">
 			<div class="cardProduct">
 				<picture class="ajaxLink">
 					<img src="img/img.jpeg">
@@ -131,11 +131,11 @@
 				</div>
 			</div>
 		</div>
-		<h2 id="categoryCell_3">🥗 Салаты</h2>
+		<h2>🥗 Салаты</h2>
 		<p class="description_category">
 			Наши салаты готовятся только перед тем, как они будут поданы на ваш стол
 		</p>
-		<div class="categoryCell">
+		<div id="categoryCell_3" class="categoryElem">
 			<div class="cardProduct">
 				<picture class="ajaxLink">
 					<img src="img/img.jpeg">
@@ -185,13 +185,13 @@
 				</div>
 			</div>
 		</div>
-		<h2 id="categoryCell_4">🍮 Десерты</h2>
+		<h2>🍮 Десерты</h2>
 		<p class="description_category">
 			Наша команда кондитеров готова предложить вам разнообразные варианты 
 			десертов, которые подойдут как для легкого перекуса, так и для особенных 
 			праздников.
 		</p>
-		<div class="categoryCell">
+		<div id="categoryCell_4" class="categoryElem">
 			<div class="cardProduct">
 				<picture class="ajaxLink">
 					<img src="img/img.jpeg">
@@ -244,6 +244,6 @@
 	</div>
 
 	<script src="js/flickity.pkgd.min.js"></script>
-	<script src="js/script.js"></script>
+	<script src="js/script1.js"></script>
 </body>
 </html>

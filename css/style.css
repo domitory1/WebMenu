@@ -32,8 +32,9 @@ body{
 .header a:last-child{
 	margin-right: 3px;
 }
-.header a.is-nav-selected{
+.header a.active{
 	transition: all ease 210ms;
+	margin-right: 0px 3px 0px 3px;
 	border-radius: 25px;
 	color: white;
 	background: rgb(51, 144, 236);
@@ -46,7 +47,7 @@ body{
 	font-size: 14px;
 	color: #707579;
 }
-.categoryCell{
+.categoryElem{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 }

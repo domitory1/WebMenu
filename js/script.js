@@ -2,6 +2,7 @@
 var slider = new Flickity('.slider',{
 	freeScroll: true,
 	contain: true,
+	dragThreshold: 10,
 	prevNextButtons: false,
 	pageDots: false,
 });
