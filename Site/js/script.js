@@ -48,7 +48,7 @@ $("body").on('click', '[href*="#"]', function(e){
 	let fixed_offset = 100;
 	tg.HapticFeedback.selectionChanged(function() {});
 	//$(this).addClass('active');
-	$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 500);
+	$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 100);
 	//getCurrentICatalogNav();
 	
 });
