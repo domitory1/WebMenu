@@ -1,4 +1,5 @@
 tg = window.Telegram.WebApp;
+tg.expand;
 
 // Слайдер
 var slider = new Flickity('.slider',{
