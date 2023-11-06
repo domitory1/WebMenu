@@ -22,7 +22,6 @@ body{
 }
 .slider{
 	padding-right: 20px;
-	border: 1px solid red;
 }
 .slider a{
 	margin-left: 3px;
@@ -44,7 +43,6 @@ body{
 .container{
 	margin-top: 65px;
 	padding-left: 10px;
-	border: 1px solid red;
 }
 .container p{
 	margin-right: 10px;
