@@ -1,6 +1,6 @@
 tg = window.Telegram.WebApp;
 tg.expand();
-window.Telegram.WebApp.disableClosingConfirmation();
+tg.disableClosingConfirmation();
 
 // Слайдер
 var slider = new Flickity('.slider',{
