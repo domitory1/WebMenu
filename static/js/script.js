@@ -1,3 +1,5 @@
+tg = window.Telegram.WebApp;
+
 document.addEventListener('DOMContentLoaded', () => {
 
     const inputElement = document.querySelector('input')
