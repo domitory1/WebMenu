@@ -53,7 +53,7 @@ a{
 	text-align: center;
 	border-radius: 8px;
 	font-weight: 600;
-	color: var(--tg-theme-text-color);
+	color: var(--tg-theme-button-text-color);
 	background-color: var(--tg-theme-button-color);
 }
 a:hover{
