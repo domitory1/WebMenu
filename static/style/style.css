@@ -37,7 +37,7 @@ input{
 }
 input:focus{
 	outline: none;
-	border: 1px solid var(--tg-theme-button-color);
+	border: 2px solid var(--tg-theme-button-color);
 }
 .button{
 	position: fixed;
