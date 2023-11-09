@@ -15,7 +15,7 @@ body{
 	width: 0;
 }
 form{
-	margin: 0 50px;
+	margin: 0 10px;
 }
 h2{
     text-align: center;
@@ -32,6 +32,7 @@ input{
 	transition: all ease 220ms;
 	width: 100%;
 	padding: 8px 12px;
+	font-size: 14px;
 	border-radius: 8px;
 	border: 2px solid var(--tg-theme-hint-color);
 }
@@ -47,9 +48,9 @@ input:focus{
 }
 button{
 	display: block;
-	width: 90%;
+	width: 95%;
 	margin: 0 auto;
-	padding: 15px 0;
+	padding: 12px 0;
 	text-align: center;
 	border-radius: 8px;
 	font-weight: 600;
