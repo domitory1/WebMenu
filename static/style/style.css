@@ -49,10 +49,11 @@ button{
 	display: block;
 	width: 90%;
 	margin: 0 auto;
-	padding: 10px 0;
+	padding: 15px 0;
 	text-align: center;
 	border-radius: 8px;
 	font-weight: 600;
+	font-size: 17px;
 	border: none;
 	color: var(--tg-theme-button-text-color);
 	background-color: var(--tg-theme-button-color);
