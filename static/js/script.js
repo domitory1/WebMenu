@@ -3,7 +3,7 @@ tg.expand();
 tg.enableClosingConfirmation();
 
 tg.MainButton.text = "Подтвердить номер"
-tg.MainButton.show();
+
 let phoneInput = document.querySelector('input');
 
 const phoneMask = new IMask(phoneInput, {
@@ -19,5 +19,3 @@ function phoneInputHandler(){
     tg.MainButton.hide();
   }
 }
-
-document.getElementByld()
