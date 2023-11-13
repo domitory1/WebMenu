@@ -21,7 +21,7 @@ function phoneInputHandler(){
   }
 }
 
-tg.MainButton.onClick(buttonHandler);
+tg.MainButton.onClick("click", buttonHandler);
 
 async function buttonHandler(e) {
   e.preventDefault();
