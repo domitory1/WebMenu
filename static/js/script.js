@@ -14,14 +14,11 @@ phoneInput.addEventListener("input", phoneInputHandler);
 
 function phoneInputHandler(){
   if (phoneMask.masked.isComplete){
-    tg.MainButton.classList.add("button--active")
     phoneInput.classList.remove('incorrectInput');
-  } else{
-    tg.MainButton.classList.remove("button--active")
   }
 }
 
-
+tg.MainButton.onClick(console.log('Привет'))
 
 /*
 button.addEventListener("click", buttonHandler);
