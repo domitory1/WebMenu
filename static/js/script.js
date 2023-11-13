@@ -14,8 +14,36 @@ phoneInput.addEventListener("input", phoneInputHandler);
 
 function phoneInputHandler(){
   if (phoneMask.masked.isComplete){
+    tg.MainButton.classList.add("button--active")
     phoneInput.classList.remove('incorrectInput');
   } else{
-    phoneInput.classList.add('incorrectInput');
+    tg.MainButton.classList.remove("button--active")
   }
 }
+
+
+
+/*
+button.addEventListener("click", buttonHandler);
+
+function phoneInputHandler(){
+  if (phoneMask.masked.isComplete){
+    button.classList.add("button--active");
+    phoneInput.classList.remove("wrong");
+  } else{
+    button.classList.remove("button--active");
+  }
+}
+
+async function buttonHandler(e){
+  e.preventDefault();
+  if (button.classList == "button--active"){
+    return await fetch("send_msg.php", {
+      method: "POST",
+      body: phoneMask.unmaskedValue
+    })
+  } else {
+    phoneInput.classList.add("wrong")
+  }
+}
+*/
