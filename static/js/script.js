@@ -5,6 +5,7 @@ tg.enableClosingConfirmation();
 tg.MainButton.text = "Подтвердить номер"
 tg.MainButton.color = color_btn;
 tg.MainButton.textColor = color_text_btn;
+tg.MainButton.show();
 
 let phoneInput = document.querySelector('input');
 let button = document.querySelector('button');
