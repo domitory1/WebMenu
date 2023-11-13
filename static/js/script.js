@@ -14,14 +14,26 @@ phoneInput.addEventListener("input", phoneInputHandler);
 
 function phoneInputHandler(){
   if (phoneMask.masked.isComplete){
+    phoneInput.classList.add('correctInput');
     phoneInput.classList.remove('incorrectInput');
+  } else{
+    phoneInput.classList.remove('correctInput');
   }
 }
 
-tg.MainButton.onClick(function() {
-  console.log("Привет");
-});
+tg.MainButton.onClick(buttonHandler);
 
+async function buttonHandler(e) {
+  e.preventDefault();
+  if (phoneInput.classList == "correctInput"){
+    return await fetch("send_msg.php",{
+      mathod: "POST",
+      bode: phoneMask.unmaskedValue
+    })
+  } else{
+    phoneInput.classList.add('incorrectInput');
+  }
+}
 /*
 button.addEventListener("click", buttonHandler);
 
