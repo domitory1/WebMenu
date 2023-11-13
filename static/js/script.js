@@ -16,7 +16,7 @@ function phoneInputHandler(){
   if (phoneMask.masked.isComplete){
     tg.MainButton.show();
   } else{
-    tg.MainButton.hode();
+    tg.MainButton.hide();
   }
 }
 
