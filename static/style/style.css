@@ -1,8 +1,8 @@
 html{
-	height: 100vh;
+	height: 100%;
 }
 body{
-	height: 100vh;
+	height: 100%;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
@@ -37,11 +37,14 @@ input{
 	border-radius: 8px;
 	border: 2px solid var(--tg-theme-hint-color);
 }
+input.wrong{
+	border: 2px solid red;
+}
 input:focus{
 	outline: none;
 	border: 2px solid var(--tg-theme-button-color);
 }
-.button{
+.button-place{
 	position: fixed;
 	left: 0;
 	bottom: 0;
