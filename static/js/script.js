@@ -21,11 +21,10 @@ function phoneInputHandler(){
   }
 }
 
-tg.MainButton.onClick("click", buttonHandler);
+tg.MainButton.onClick(function(){
+  console.log("вызов");
+});
 
-function buttonHandler(e) {
-  console.log("вызов")
-}
 /*
 button.addEventListener("click", buttonHandler);
 
