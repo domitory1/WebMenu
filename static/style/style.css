@@ -37,14 +37,7 @@ input{
 	border-radius: 8px;
 	border: 2px solid var(--tg-theme-hint-color);
 }
-input.wrong{
-	border: 2px solid red;
-}
 input:focus{
 	outline: none;
 	border: 2px solid var(--tg-theme-button-color);
-}
-.button{
-	color: var(--tg-theme-button-text-color);
-	background-color: var(--tg-theme-button-color);
 }
