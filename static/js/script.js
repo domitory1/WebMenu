@@ -26,11 +26,13 @@ tg.MainButton.onClick("click", buttonHandler);
 async function buttonHandler(e) {
   e.preventDefault();
   if (phoneInput.classList == "correctInput"){
+    console.log('Отправка сообщения')
     return await fetch("send_msg.php",{
       mathod: "POST",
       bode: phoneMask.unmaskedValue
     })
   } else{
+    console.log('Не корректный ввод номера')
     phoneInput.classList.add('incorrectInput');
   }
 }
