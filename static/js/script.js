@@ -3,8 +3,13 @@ tg.expand();
 tg.enableClosingConfirmation();
 
 tg.MainButton.text = "Подтвердить номер"
-tg.MainButton.color = color_btn;
-tg.MainButton.textColor = color_text_btn;
+if(color_btn) {
+	tg.MainButton.color = color_btn;
+}
+
+if(color_text_btn) {
+	tg.MainButton.textColor = color_text_btn;
+}
 
 let phoneInput = document.querySelector('input');
 let button = document.querySelector('button');
