@@ -19,7 +19,7 @@ function phoneInputHandler(){
 }
 
 tg.MainButton.onClick(function() {
-  WebApp.showAlert("Хорошо, ты нажал на главную кнопку.");
+  console.log("Привет");
 });
 
 /*
