@@ -23,7 +23,7 @@ function phoneInputHandler(){
 
 tg.MainButton.onClick("click", buttonHandler);
 
-async function buttonHandler(e) {
+function buttonHandler(e) {
   console.log("вызов")
 }
 /*
