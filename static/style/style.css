@@ -41,3 +41,6 @@ input:focus{
 	outline: none;
 	border: 2px solid var(--tg-theme-button-color);
 }
+input .incorrectInput{
+	border: 2px solid red;
+}
