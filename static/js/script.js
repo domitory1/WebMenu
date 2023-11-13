@@ -10,7 +10,7 @@ const phoneMask = new IMask(phoneInput, {
   mask: "+{7} (000) 000-00-00"
 });
 
-document.getElementByld('1').blur();
+document.getElementByld('input').blur();
 phoneInput.addEventListener("input", phoneInputHandler);
 
 function phoneInputHandler(){
