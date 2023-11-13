@@ -14,15 +14,15 @@ phoneInput.addEventListener("input", phoneInputHandler);
 
 function phoneInputHandler(){
   if (phoneMask.masked.isComplete){
-    tg.MainButton.enable();
+    tg.MainButton.show();
   } else{
-    tg.MainButton.disable();
+    tg.MainButton.hode();
   }
 }
 
 
 
-/*
+
 async function buttonHandler(e){
   e.preventDefault();
   if (tg.MainButtonclassList == "button"){
@@ -33,4 +33,4 @@ async function buttonHandler(e){
   } else {
     phoneInput.classList.add("wrong")
   }
-}*/
+}
