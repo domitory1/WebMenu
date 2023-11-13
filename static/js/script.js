@@ -18,7 +18,9 @@ function phoneInputHandler(){
   }
 }
 
-tg.MainButton.onClick(console.log('Привет'))
+tg.MainButton.onClick(function() {
+  WebApp.showAlert("Хорошо, ты нажал на главную кнопку.");
+});
 
 /*
 button.addEventListener("click", buttonHandler);
