@@ -22,7 +22,11 @@ function phoneInputHandler(){
 }
 
 tg.MainButton.onClick(function(){
-  console.log("вызов");
+  if (phoneInput.classList == 'correctInput'){
+    console.log('отправка сообщения');
+  }else{
+    phoneInput.classList.add('incorrectInput');
+  }
 });
 
 /*
