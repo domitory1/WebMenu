@@ -2,8 +2,8 @@ let tg = window.Telegram.WebApp;
 tg.expand();
 tg.enableClosingConfirmation();
 
-tg.MainButton.text = "Подтвердить номер"
-tg.MainButton.show()
+tg.MainButton.text = "Подтвердить номер";
+tg.MainButton.show();
 let phoneInput = document.querySelector('input');
 
 const phoneMask = new IMask(phoneInput, {
