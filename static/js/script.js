@@ -12,6 +12,7 @@ const phoneMask = new IMask(phoneInput, {
 
 $('#change_search_input').mouseup(function(e){
   e.preventDefault();
+  console.log("скрытие");
 });
 
 phoneInput.addEventListener("input", phoneInputHandler);
