@@ -10,6 +10,10 @@ const phoneMask = new IMask(phoneInput, {
   mask: "+{7} (000) 000-00-00"
 });
 
+$('#change_search_input').mouseup(function(e){
+  e.preventDefault();
+});
+
 phoneInput.addEventListener("input", phoneInputHandler);
 
 function phoneInputHandler(){
@@ -20,11 +24,6 @@ function phoneInputHandler(){
     phoneInput.classList.remove('correctInput');
   }
 }
-
-let body = document.querySelector('body');
-body.addEventListener('click', function(event){
-  phoneInput.blur();
-});
 
 tg.MainButton.onClick(function(){
   phoneInput.blur();
