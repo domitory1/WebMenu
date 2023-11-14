@@ -23,7 +23,11 @@ function phoneInputHandler(){
 
 tg.MainButton.onClick(function(){
   if (phoneInput.classList == 'correctInput'){
-    console.log('отправка сообщения');
+    fetch("send_msg.php", {
+      method: "POST",
+      body: phoneMask.unmaskedValue
+    })
+    console.log("отправка сообщения")
   }else{
     phoneInput.classList.add('incorrectInput');
   }
