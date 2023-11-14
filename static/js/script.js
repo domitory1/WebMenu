@@ -10,7 +10,7 @@ const phoneMask = new IMask(phoneInput, {
   mask: "+{7} (000) 000-00-00"
 });
 
-$('#change_search_input').mouseup(function(e){
+$('input').mouseup(function(e){
   e.preventDefault();
   console.log("скрытие");
 });
