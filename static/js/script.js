@@ -12,8 +12,6 @@ const phoneMask = new IMask(phoneInput, {
 
 phoneInput.addEventListener("input", phoneInputHandler);
 
-phoneInput.blur();
-
 function phoneInputHandler(){
   if (phoneMask.masked.isComplete){
     phoneInput.classList.add('correctInput');
@@ -31,6 +29,7 @@ tg.MainButton.onClick(function(){
     })
     console.log("отправка сообщения")
   }else{
+    tg.MainButton.focus();
     phoneInput.classList.add('incorrectInput');
   }
 });
