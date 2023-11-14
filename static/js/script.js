@@ -21,6 +21,10 @@ function phoneInputHandler(){
   }
 }
 
+body.onClick(function(){
+  phoneInput.blur();
+});
+
 tg.MainButton.onClick(function(){
   phoneInput.blur();
   if (phoneInput.classList == 'correctInput'){
@@ -33,28 +37,3 @@ tg.MainButton.onClick(function(){
     phoneInput.classList.add('incorrectInput');
   }
 });
-
-/*
-button.addEventListener("click", buttonHandler);
-
-function phoneInputHandler(){
-  if (phoneMask.masked.isComplete){
-    button.classList.add("button--active");
-    phoneInput.classList.remove("wrong");
-  } else{
-    button.classList.remove("button--active");
-  }
-}
-
-async function buttonHandler(e){
-  e.preventDefault();
-  if (button.classList == "button--active"){
-    return await fetch("send_msg.php", {
-      method: "POST",
-      body: phoneMask.unmaskedValue
-    })
-  } else {
-    phoneInput.classList.add("wrong")
-  }
-}
-*/
