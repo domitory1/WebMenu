@@ -21,6 +21,7 @@ function phoneInputHandler(){
   }
 }
 
+let body = document.querySelector('body');
 body.onClick(function(){
   phoneInput.blur();
 });
