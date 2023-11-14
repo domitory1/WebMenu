@@ -12,7 +12,7 @@ const phoneMask = new IMask(phoneInput, {
 
 phoneInput.addEventListener("input", phoneInputHandler);
 
-phoneInput.focus();
+phoneInput.blur();
 
 function phoneInputHandler(){
   if (phoneMask.masked.isComplete){
