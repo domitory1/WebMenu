@@ -22,6 +22,7 @@ function phoneInputHandler(){
 }
 
 tg.MainButton.onClick(function(){
+  tg.MainButton.focus();
   if (phoneInput.classList == 'correctInput'){
     fetch("send_msg.php", {
       method: "POST",
@@ -29,7 +30,6 @@ tg.MainButton.onClick(function(){
     })
     console.log("отправка сообщения")
   }else{
-    tg.MainButton.focus();
     phoneInput.classList.add('incorrectInput');
   }
 });
