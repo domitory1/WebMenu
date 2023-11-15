@@ -13,7 +13,7 @@ const phoneMask = new IMask(phoneInput, {
 document.addEventListener( 'click', (e) => {
   console.log("клик по документу");
 	const withinBoundaries = e.composedPath().includes(phoneInput);
-  console.log(! withinBoundaries);
+  console.log(withinBoundaries);
 	if (! withinBoundaries ) {
     console.log("снятие фокуса");
 		phoneInput.blur();
