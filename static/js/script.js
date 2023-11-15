@@ -14,6 +14,7 @@ document.addEventListener( 'click', (e) => {
 	const withinBoundaries = e.composedPath().includes(phoneInput);
  
 	if ( ! withinBoundaries ) {
+    console.log("снятие фокуса");
 		phoneInput.blur(); // скрываем элемент т к клик был за его пределами
 	}
 })
