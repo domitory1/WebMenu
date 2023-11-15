@@ -16,7 +16,10 @@ document.addEventListener( 'click', (e) => {
 	if ( withinBoundaries ) {
     console.log("снятие фокуса")
 		phoneInput.blur();
-	}
+	} else{
+    console.log("фокусирование");
+    phoneInput.focus();
+  }
 });
 
 phoneInput.addEventListener("input", phoneInputHandler);
