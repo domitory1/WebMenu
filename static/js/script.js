@@ -9,15 +9,16 @@ let phoneInput = document.querySelector('input');
 const phoneMask = new IMask(phoneInput, {
   mask: "+{7} (000) 000-00-00"
 });
- 
+
 document.addEventListener( 'click', (e) => {
+  console.log("клик по документу");
 	const withinBoundaries = e.composedPath().includes(phoneInput);
- 
+  console.log(withinBoundaries);
 	if ( ! withinBoundaries ) {
     console.log("снятие фокуса");
 		phoneInput.blur();
 	}
-})
+});
 
 phoneInput.addEventListener("input", phoneInputHandler);
 
@@ -28,7 +29,7 @@ function phoneInputHandler(){
   } else{
     phoneInput.classList.remove('correctInput');
   }
-};
+}
 
 tg.MainButton.onClick(function(){
   phoneInput.blur();
