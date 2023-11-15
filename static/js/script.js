@@ -9,11 +9,14 @@ let phoneInput = document.querySelector('input');
 const phoneMask = new IMask(phoneInput, {
   mask: "+{7} (000) 000-00-00"
 });
-
-$('input').mousedown(function(e){
-  e.preventDefault();
-  console.log("скрытие");
-});
+ 
+document.addEventListener( 'click', (e) => {
+	const withinBoundaries = e.composedPath().includes(phoneInput);
+ 
+	if ( ! withinBoundaries ) {
+		phoneInput.blur(); // скрываем элемент т к клик был за его пределами
+	}
+})
 
 phoneInput.addEventListener("input", phoneInputHandler);
 
