@@ -5,9 +5,10 @@ tg.enableClosingConfirmation();
 tg.MainButton.text = "Подтвердить номер";
 tg.MainButton.show();
 let phoneInput = document.querySelector('input');
+let flag = true;
 
 const phoneMask = new IMask(phoneInput, {
-  mask: "+{7} (000) 000-00-00"
+  mask: "+7 (000) 000-00-00"
 });
 
 document.addEventListener( 'click', (e) => {
@@ -19,6 +20,11 @@ document.addEventListener( 'click', (e) => {
 	} else{
     console.log("фокусирование");
     phoneInput.focus();
+    if (flag){
+      phoneInput.value = '+7 (';
+      flag = false;
+    }
+      
   }
 });
 
