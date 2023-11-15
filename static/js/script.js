@@ -15,7 +15,7 @@ document.addEventListener( 'click', (e) => {
  
 	if ( ! withinBoundaries ) {
     console.log("снятие фокуса");
-		phoneInput.blur(); // скрываем элемент т к клик был за его пределами
+		phoneInput.blur();
 	}
 })
 
@@ -28,7 +28,7 @@ function phoneInputHandler(){
   } else{
     phoneInput.classList.remove('correctInput');
   }
-}
+};
 
 tg.MainButton.onClick(function(){
   phoneInput.blur();
