@@ -5,7 +5,7 @@ tg.enableClosingConfirmation();
 tg.MainButton.text = "Подтвердить номер";
 tg.MainButton.show();
 let phoneInput = document.querySelector('input');
-let flag = true;
+/*let flag = true;*/
 
 const phoneMask = new IMask(phoneInput, {
   mask: "+7 (000) 000-00-00"
@@ -47,9 +47,9 @@ tg.MainButton.onClick(function(){
       method: "POST",
       body: phoneMask.unmaskedValue
     })
-    /*window.location.href = 'http://example.com';*/
+    window.location.href = 'Auntification/SendCode.html';
     console.log("отправка сообщения")
-  }else{
+  } else{
     phoneInput.classList.add('incorrectInput');
   }
 });
