@@ -27,15 +27,14 @@ function passwordInputHandler(){
 }
 
 tg.MainButton.onClick(function(){
-    passwordInput.blur();
-    if (passwordInput.classList == 'correctInput'){
-      fetch("send_msg.php", {
-        method: "POST",
-        body: password.value
-      })
-    console.log("отправка сообщения");
-    console.log(password.value)
+  passwordInput.blur();
+  if (passwordInput.classList == 'correctInput'){
+    fetch("send_msg.php", {
+      method: "POST",
+      body: password.value
+    })
+    console.log("отправка сообщения", password.value);
     }else{
-        passwordInput.classList.add('incorrectInput');
-    }
-  });
+      passwordInput.classList.add('incorrectInput');
+   }
+});
