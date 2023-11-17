@@ -3,6 +3,7 @@ tg.expand();
 tg.enableClosingConfirmation();
 tg.MainButton.text = "Отправить код";
 tg.MainButton.show();
+tg.MainButton.hideProgress();
 
 
 let passwordInput = document.querySelector('input');

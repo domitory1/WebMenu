@@ -1,6 +1,7 @@
 let tg = window.Telegram.WebApp;
 tg.expand();
 tg.enableClosingConfirmation();
+tg.MainButton.hideProgress();
 
 tg.MainButton.text = "Подтвердить номер";
 tg.MainButton.show();
