@@ -8,12 +8,9 @@ let passwordInput = document.querySelector('input');
 
 document.addEventListener( 'click', (e) => {
 	const withinBoundaries = e.composedPath().includes(passwordInput);
-  console.log(withinBoundaries);
 	if (! withinBoundaries ) {
-    console.log("снятие фокуса")
 		passwordInput.blur();
 	} else{
-    console.log("фокусирование");
     passwordInput.focus();
   }
 });
