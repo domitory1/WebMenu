@@ -28,8 +28,7 @@ function passwordInputHandler(){
 
 tg.MainButton.onClick(function(){
   passwordInput.blur();
-  console.log(passwordInput.classList.value);
-  if (passwordInput.classList == 'correctInput'){
+  if (passwordInput.classList.value == 'correctInput'){
     fetch("send_msg.php", {
       method: "POST",
       body: password.value
