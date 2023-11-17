@@ -31,9 +31,9 @@ tg.MainButton.onClick(function(){
   if (passwordInput.classList.value == 'correctInput'){
     fetch("send_msg.php", {
       method: "POST",
-      body: password.value
+      body: passwordInput.value
     })
-    console.log(password.value);
+    console.log(passwordInput.value);
   }else{
       passwordInput.classList.add('incorrectInput');
   }
