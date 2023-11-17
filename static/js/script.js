@@ -34,7 +34,7 @@ tg.MainButton.onClick(function(){
       body: password.value
     })
     console.log("отправка сообщения", password.value);
-    }else{
+  }else{
       passwordInput.classList.add('incorrectInput');
-   }
+  }
 });
