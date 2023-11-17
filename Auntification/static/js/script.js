@@ -3,6 +3,7 @@ tg.expand();
 tg.enableClosingConfirmation();
 tg.MainButton.text = "Отправить код";
 tg.MainButton.show();
+tg.BackButton.Show();
 tg.MainButton.hideProgress();
 
 
