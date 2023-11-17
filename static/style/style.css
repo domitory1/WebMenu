@@ -30,12 +30,12 @@ input{
     text-align: center;
     font-size: 13px;
 	border-radius: 8px;
-    border: 2px solid var(--tg-theme-hint-color);
+    border: 1px solid var(--tg-theme-hint-color);
 }
 input:focus{
 	outline: none;
-	border: 2px solid var(--tg-theme-button-color);
+	border: 1px solid var(--tg-theme-button-color);
 }
 .incorrectInput{
-	border: 2px solid red;
+	border: 1px solid red;
 }
