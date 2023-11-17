@@ -18,14 +18,14 @@ document.addEventListener( 'click', (e) => {
   }
 });
 
-phoneInput.addEventListener("input", phoneInputHandler);
+passwordInput.addEventListener("input", passwordInputHandler);
 
-function phoneInputHandler(){
+function passwordInputHandler(){
   if (passwordInput.Length == 6){
-    phoneInput.classList.add('correctInput');
-    phoneInput.classList.remove('incorrectInput');
+    passwordInput.classList.add('correctInput');
+    passwordInput.classList.remove('incorrectInput');
   } else{
-    phoneInput.classList.remove('correctInput');
+    passwordInput.classList.remove('correctInput');
   }
 }
 
@@ -39,6 +39,6 @@ tg.MainButton.onClick(function(){
       })
       console.log("отправка сообщения")
     }else{
-        phoneInput.classList.add('incorrectInput');
+        passwordInput.classList.add('incorrectInput');
     }
   });
