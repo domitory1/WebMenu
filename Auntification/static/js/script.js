@@ -20,11 +20,12 @@ document.addEventListener( 'click', (e) => {
 	} else{
     console.log("фокусирование");
     phoneInput.focus();
+    /*
     if (flag){
       phoneInput.value = '+7 (';
       flag = false;
     }
-      
+    */
   }
 });
 
