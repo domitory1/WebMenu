@@ -47,6 +47,7 @@ tg.MainButton.onClick(function(){
       method: "POST",
       body: phoneMask.unmaskedValue
     })
+    /*window.location.href = 'http://example.com';*/
     console.log("отправка сообщения")
   }else{
     phoneInput.classList.add('incorrectInput');

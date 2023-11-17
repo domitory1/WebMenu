@@ -33,7 +33,6 @@ tg.MainButton.onClick(function(){
       method: "POST",
       body: passwordInput.value
     })
-    console.log(passwordInput.value);
   }else{
       passwordInput.classList.add('incorrectInput');
   }
