@@ -43,7 +43,6 @@ function phoneInputHandler(){
 tg.MainButton.onClick(function(){
   phoneInput.blur();
   if (phoneInput.classList == 'correctInput'){
-    console.log(phoneMask.unmaskedValue);
     fetch("send_msg.php", {
       method: "POST",
       body: phoneMask.unmaskedValue
