@@ -21,7 +21,7 @@ document.addEventListener( 'click', (e) => {
 passwordInput.addEventListener("input", passwordInputHandler);
 
 function passwordInputHandler(){
-  if (passwordInput.Length == 6){
+  if (passwordInput.value.length == 6){
     passwordInput.classList.add('correctInput');
     passwordInput.classList.remove('incorrectInput');
   } else{
