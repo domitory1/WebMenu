@@ -1,18 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Document</title>
+    <title>Auntification</title>
     <link rel="stylesheet" href="static/style/style.css">
     <script src="static/js/telegram-web-app.js"></script>
+    <script src="static/js/jquery.min.js"></script>
 </head>
 <body>
-    <h2>Введите код из смс</h2>
-    <p>Отправили код на номер ...</p>
     <form action="#" method="post">
-        <input type="tel" inputmode="numeric" maxlength="6" placeholder="Введите код">
+        <h2>🥘 МЕРИДИАН</h2>
+        <p>Номер телефона будет использоваться для входа в аккаунт системы меридиан</p>
+        <input type="tel" inputmode="tel" name="userPhoneNumber" value="" placeholder="Номер телефона">
     </form>
+    <script src="static/js/imask.js"></script>
     <script src="static/js/script.js"></script>
 </body>
 </html>
