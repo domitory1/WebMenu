@@ -48,7 +48,7 @@ tg.MainButton.onClick(function(){
       body: phoneMask.unmaskedValue
     })
     sessionStorage.setItem('number', phoneInput);
-    window.location.href = 'Auntificaton/SendCode.html';
+    window.location.href = 'Auntification/SendCode.html';
     console.log("отправка сообщения")
   } else{
     phoneInput.classList.add('incorrectInput');
