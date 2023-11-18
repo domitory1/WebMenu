@@ -52,3 +52,10 @@ tg.MainButton.onClick(function(){
     phoneInput.classList.add('incorrectInput');
   }
 });
+
+document.getElementById('form').addEventListener('keydown', function(e){
+  console.log(e.key);
+  if (e.key == 13) {
+    this.submit();
+  } 
+})
