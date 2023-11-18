@@ -2,8 +2,8 @@ let tg = window.Telegram.WebApp;
 tg.expand();
 tg.enableClosingConfirmation();
 tg.MainButton.text = "Отправить код";
-tg.MainButton.show();
 tg.BackButton.show();
+tg.MainButton.show();
 tg.MainButton.hideProgress();
 
 
@@ -45,5 +45,6 @@ tg.MainButton.onClick(function(){
 });
 
 tg.BackButton.onClick(function(){
+  tg.BackButton.hide();
   window.history.back();
 })
