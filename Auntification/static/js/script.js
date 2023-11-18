@@ -45,5 +45,5 @@ tg.MainButton.onClick(function(){
 });
 
 tg.BackButton.onClick(function(){
-  window.location.href = 'domitory1/domitory1.github.io/index.html';
+  window.location.href = '.../index.html';
 })
