@@ -43,3 +43,7 @@ tg.MainButton.onClick(function(){
       passwordInput.classList.add('incorrectInput');
   }
 });
+
+tg.BackButton.onClick(function(){
+  window.location.href = 'index.html';
+})

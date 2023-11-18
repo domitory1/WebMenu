@@ -47,15 +47,14 @@ tg.MainButton.onClick(function(){
     })
     sessionStorage.setItem('number', phoneInput.value);
     window.location.href = 'Auntification/SendCode.html';
-    console.log("отправка сообщения")
   } else{
     phoneInput.classList.add('incorrectInput');
   }
 });
 
 document.getElementById('form').addEventListener('keydown', function(e){
-  console.log(e.key);
-  if (e.key == 13) {
+  console.log(e.code);
+  if (e.code == 13) {
     this.submit();
   } 
 })
