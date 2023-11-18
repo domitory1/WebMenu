@@ -46,7 +46,7 @@ tg.MainButton.onClick(function(){
       body: phoneMask.unmaskedValue
     })
     sessionStorage.setItem('number', phoneInput.value);
-    window.location.href = 'Auntification/SendCode.html';
+    window.location.href = 'https://github.com/domitory1/domitory1.github.io/tree/main/Auntification';
   } else{
     phoneInput.classList.add('incorrectInput');
   }
