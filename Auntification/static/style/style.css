@@ -36,7 +36,6 @@ input{
 }
 input:focus{
 	outline: none;
-	opacity: 0; transition: opacity 0.3s ease;
 	border: 2px solid var(--tg-theme-button-color);
 }
 .incorrectInput{
