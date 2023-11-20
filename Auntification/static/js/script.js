@@ -46,7 +46,7 @@ tg.MainButton.onClick(function(){
     if (response == "true"){
       window.location.href = 'Menu/main.html';
     } else{
-      consеole.log("Неправильный код")
+      console.log("Неправильный код");
     }
   }else{
       passwordInput.classList.add('incorrectInput');
