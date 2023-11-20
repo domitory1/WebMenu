@@ -6,6 +6,10 @@ tg.BackButton.show();
 tg.MainButton.show();
 tg.MainButton.hideProgress();
 
+tg.BackButton.onClick(function(){
+  tg.BackButton.hide();
+  window.history.back();
+})
 
 let passwordInput = document.querySelector('input');
 var number = sessionStorage.getItem('number');
@@ -44,8 +48,3 @@ tg.MainButton.onClick(function(){
       passwordInput.classList.add('incorrectInput');
   }
 });
-
-tg.BackButton.onClick(function(){
-  tg.BackButton.hide();
-  window.history.back();
-})
