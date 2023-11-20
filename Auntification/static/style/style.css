@@ -28,6 +28,7 @@ form{
     text-align: center;
 }
 input{
+	transition: all ease 220ms;
     padding: 8px 12px;
     text-align: center;
     font-size: 15px;
