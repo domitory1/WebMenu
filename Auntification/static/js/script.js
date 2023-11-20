@@ -44,7 +44,8 @@ tg.MainButton.onClick(function(){
     })  
     let response = "true";
     if (response == "true"){
-      window.location.href = '.../Menu/main.html';
+      window.location.href = 'Menu\main.html';
+      tg.BackButton.hide();
     } else{
       console.log("Неправильный код");
     }
