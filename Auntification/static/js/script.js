@@ -1,11 +1,11 @@
 let tg = window.Telegram.WebApp;
+
 tg.expand();
 tg.enableClosingConfirmation();
 tg.MainButton.text = "Отправить код";
 tg.BackButton.show();
 tg.MainButton.show();
 tg.MainButton.hideProgress();
-
 tg.BackButton.onClick(function(){
   tg.BackButton.hide();
   window.history.back();
@@ -25,16 +25,14 @@ document.addEventListener( 'click', (e) => {
   }
 });
 
-passwordInput.addEventListener("input", passwordInputHandler);
-
-function passwordInputHandler(){
+passwordInput.addEventListener('input', function(){
   if (passwordInput.value.length == 6){
     passwordInput.classList.add('correctInput');
     passwordInput.classList.remove('incorrectInput');
   } else{
     passwordInput.classList.remove('correctInput');
   }
-}
+});
 
 tg.MainButton.onClick(function(){
   passwordInput.blur();
@@ -44,6 +42,7 @@ tg.MainButton.onClick(function(){
       method: "POST",
       body: passwordInput.value
     })
+    .then(console.log(response))
   }else{
       passwordInput.classList.add('incorrectInput');
   }
