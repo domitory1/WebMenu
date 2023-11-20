@@ -42,12 +42,12 @@ tg.MainButton.onClick(function(){
       method: "POST",
       body: passwordInput.value
     })  
-    let response = "true";
+    let response = "false";
     if (response == "true"){
       window.location.href = 'https://domitory1.github.io/Menu/main.html';
       tg.BackButton.hide();
     } else{
-      tg.showPopup("Ой", "Введенный вами код не соппадает с тем, что мы вам отправили");
+      tg.showPopup("😔", "Введенный вами код не соппадает с тем, что мы вам отправили");
     }
   }else{
       passwordInput.classList.add('incorrectInput');
