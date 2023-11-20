@@ -47,7 +47,7 @@ tg.MainButton.onClick(function(){
       window.location.href = 'https://domitory1.github.io/Menu/main.html';
       tg.BackButton.hide();
     } else{
-      tg.showPopup("😔", "Введенный вами код не соппадает с тем, что мы вам отправили");
+      tg.showPopup("Ой", "Введенный вами код не соппадает с тем, что мы вам отправили");
     }
   }else{
       passwordInput.classList.add('incorrectInput');
