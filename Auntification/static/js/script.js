@@ -41,8 +41,13 @@ tg.MainButton.onClick(function(){
     fetch("send_msg.php", {
       method: "POST",
       body: passwordInput.value
-    })
-    .then(console.log(response))
+    })  
+    let response = "true";
+    if (response == "true"){
+      window.location.href = 'Menu/main.html';
+    } else{
+      consеole.log("Неправильный код")
+    }
   }else{
       passwordInput.classList.add('incorrectInput');
   }
