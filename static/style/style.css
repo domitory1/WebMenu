@@ -48,6 +48,7 @@ p.secondP{
 	opacity: 0;
 	transition: opacity 220ms ease-in-out;
 	text-align: left;
+	margin-top: 5px;
 	padding-left: 10px;
 	font-size: 12;
 	color: var(--tg-theme-hint-color);
