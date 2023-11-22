@@ -50,7 +50,7 @@ tg.MainButton.onClick(function(){
     } else{
       tg.showPopup({
         title: '😔',
-        message: "Введенный вами код не соппадает с тем, что мы вам отправили"
+        message: "Введенный вами код не совпадает с тем, что мы вам отправили"
       });
       passwordInput.value = '';
       passwordInput.classList.remove('correctInput');
