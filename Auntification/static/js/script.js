@@ -49,7 +49,7 @@ tg.MainButton.onClick(function(){
       tg.BackButton.hide();
     } else{
       tg.showPopup({
-        title: '😔',
+        title: '😔 Ой',
         message: "Введенный вами код не совпадает с тем, что мы вам отправили"
       });
       passwordInput.value = '';
