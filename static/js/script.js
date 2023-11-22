@@ -29,10 +29,13 @@ phoneInput.addEventListener('input', function(){
   if (phoneMask.masked.isComplete){
     phoneInput.classList.add('correctInput');
     phoneInput.classList.remove('incorrectInput');
+    p.classList.remove("show");
   } else{
     phoneInput.classList.remove('correctInput');
   }
 });
+
+let p = document.createElement('p');
 
 tg.MainButton.onClick(function(){
   phoneInput.blur();
@@ -45,11 +48,6 @@ tg.MainButton.onClick(function(){
     window.location.href = 'https://domitory1.github.io/Auntification/SendCode.html';
   } else{
     phoneInput.classList.add('incorrectInput');
+    p.classList.add("show");
   }
 });
-
-let form = document.querySelector('form');
-let p = document.createElement('p');
-p.textContent = 'Номер телефона введен неверно';
-p.classList.add("p")
-form.appendChild(p);
