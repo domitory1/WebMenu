@@ -43,7 +43,7 @@ tg.MainButton.onClick(function(){
       method: "POST",
       body: passwordInput.value
     })  
-    let response = "false";
+    let response = "true";
     if (response == "true"){	
       sessionStorage.removeItem('number');
       window.location.href = 'https://domitory1.github.io/Menu/main.html';
