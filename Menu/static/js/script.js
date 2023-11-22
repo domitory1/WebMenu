@@ -4,11 +4,13 @@ tg.enableClosingConfirmation();
 
 // Слайдер
 var slider = new Flickity('.slider',{
+	cellAlign: 'center',
 	freeScroll: true,
 	contain: true,
 	dragThreshold: 10,
 	prevNextButtons: false,
 	pageDots: false,
+	accessibility: false,
 });
 
 function getCurrentICatalogNav() {
