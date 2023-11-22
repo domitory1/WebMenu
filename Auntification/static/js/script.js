@@ -51,6 +51,7 @@ tg.MainButton.onClick(function(){
         title: '😔',
         message: "Введенный вами код не соппадает с тем, что мы вам отправили"
       });
+      passwordInput.value = '';
     }
   }else{
       passwordInput.classList.add('incorrectInput');

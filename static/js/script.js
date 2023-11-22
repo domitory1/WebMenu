@@ -47,3 +47,9 @@ tg.MainButton.onClick(function(){
     phoneInput.classList.add('incorrectInput');
   }
 });
+
+let form = document.querySelector('form');
+let p = document.createElement('p');
+p.textContent = 'Номер телефона введен неверно';
+p.classList.add("p")
+form.appendChild(p);
