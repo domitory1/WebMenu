@@ -43,7 +43,8 @@ tg.MainButton.onClick(function(){
       body: passwordInput.value
     })  
     let response = "false";
-    if (response == "true"){
+    if (response == "true"){	
+      sessionStorage.removeItem('number');
       window.location.href = 'https://domitory1.github.io/Menu/main.html';
       tg.BackButton.hide();
     } else{
@@ -52,7 +53,7 @@ tg.MainButton.onClick(function(){
         message: "Введенный вами код не соппадает с тем, что мы вам отправили"
       });
       passwordInput.value = '';
-      passwordInput.classList.add('incorrectInput');
+      passwordInput.classList.remove('correctInput');
     }
   }else{
       passwordInput.classList.add('incorrectInput');
