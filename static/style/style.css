@@ -50,7 +50,7 @@ p.secondP{
 	text-align: left;
 	margin-top: 5px;
 	padding-left: 10px;
-	font-size: 12;
+	font-size: 14px;
 	color: var(--tg-theme-hint-color);
 }
 p.secondP.show{
