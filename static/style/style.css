@@ -22,7 +22,7 @@ h2{
     text-align: center;
 	color: var(--tg-theme-text-color);
 }
-p{
+p.firstP{
 	margin-bottom: 45px;
 	text-align: center;
 	font-size: 14px;
@@ -44,7 +44,7 @@ input:focus{
 .incorrectInput{
 	border: 2px solid red;
 }
-p{
+p.secondP{
 	opacity: 0;
 	transition: opacity 1s ease-in-out;
 	text-align: left;
