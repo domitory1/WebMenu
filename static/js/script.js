@@ -35,7 +35,7 @@ phoneInput.addEventListener('input', function(){
   }
 });
 
-let p = document.createElement('p');
+let p = document.querySelector('p');
 
 tg.MainButton.onClick(function(){
   phoneInput.blur();
@@ -48,6 +48,6 @@ tg.MainButton.onClick(function(){
     window.location.href = 'https://domitory1.github.io/Auntification/SendCode.html';
   } else{
     phoneInput.classList.add('incorrectInput');
-    p.classList.add("show");
+    p.classList.add('show');
   }
 });
