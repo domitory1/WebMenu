@@ -51,6 +51,6 @@ p.secondP{
 	padding-left: 10px;
 	color: var(--tg-theme-hint-color);
 }
-p.show{
+p.secondP.show{
 	opacity: 1;
 }
