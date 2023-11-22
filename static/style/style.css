@@ -46,7 +46,7 @@ input:focus{
 }
 p.secondP{
 	opacity: 0;
-	transition: opacity 1s ease-in-out;
+	transition: opacity 220ms ease-in-out;
 	text-align: left;
 	padding-left: 10px;
 	color: var(--tg-theme-hint-color);
