@@ -35,7 +35,7 @@ phoneInput.addEventListener('input', function(){
   }
 });
 
-let p = document.querySelector('p');
+let p = document.querySelector('.secondP');
 
 tg.MainButton.onClick(function(){
   phoneInput.blur();
