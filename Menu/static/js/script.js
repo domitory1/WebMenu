@@ -2,7 +2,6 @@ tg = window.Telegram.WebApp;
 tg.expand();
 tg.enableClosingConfirmation();
 
-// Слайдер
 var slider = new Flickity('.slider',{
 	cellAlign: 'center',
 	freeScroll: true,
@@ -10,7 +9,6 @@ var slider = new Flickity('.slider',{
 	dragThreshold: 10,
 	prevNextButtons: false,
 	pageDots: false,
-	accessibility: false,
 });
 
 function getCurrentICatalogNav() {
@@ -23,15 +21,16 @@ function getCurrentICatalogNav() {
 				$('.slider a[href="#'+current+'"]').addClass('active');
 				slider.select(i);
 			}
-			//return false;
 		}
 	});
 }
+
 function delActiveICatalogNav() {
 	$('.slider a').each(function() {
 		$(this).removeClass('active');
 	})
 }
+
 function getActiveICatalogNav(target) {
 	let w = $(window);
 	let t = $(target);
@@ -51,12 +50,9 @@ $("body").on('click', '[href*="#"]', function(e){
 	e.stopImmediatePropagation();
 	let fixed_offset = 100;
 	tg.HapticFeedback.selectionChanged(function() {});
-	$(this).addClass('active');
-	$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 100);
-	getCurrentICatalogNav();
+	$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 200);
 	
 });
-
 
 $(window).scroll(function(){
 	getCurrentICatalogNav();
