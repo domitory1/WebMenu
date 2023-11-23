@@ -21,7 +21,6 @@ body{
 	padding: 10px;
 	background-color: var(--tg-theme-bg-color);
 	border-bottom: 1px solid var(--tg-theme-hint-color);
-	border: 1px solid red;
 }
 .slider a{
 	display: block;
