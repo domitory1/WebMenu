@@ -1,6 +1,9 @@
 tg = window.Telegram.WebApp;
+
 tg.expand();
 tg.enableClosingConfirmation();
+tg.MainButton.show();
+tg.MainButton.text = "Корзина";
 
 var slider = new Flickity('.slider',{
 	cellAlign: 'center',
@@ -48,9 +51,8 @@ function getActiveICatalogNav(target) {
 $("body").on('click', '[href*="#"]', function(e){
 	e.preventDefault();
 	e.stopImmediatePropagation();
-	let fixed_offset = 100;
 	tg.HapticFeedback.selectionChanged(function() {});
-	$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - fixed_offset }, 200);
+	$('html,body').stop().animate({ scrollTop: $(this.hash).offset().top - 100 }, 200);
 	
 });
 
