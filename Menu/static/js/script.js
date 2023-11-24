@@ -1,38 +1,17 @@
 tg = window.Telegram.WebApp;
-
 tg.expand();
 tg.enableClosingConfirmation();
 tg.MainButton.text = "Корзина";
 tg.MainButton.show();
 
 var slider = new Flickity('.slider',{
-	cellAlign: 'center',
 	freeScroll: true,
 	contain: true,
+	cellAlign: 'center',
 	dragThreshold: 10,
 	prevNextButtons: false,
 	pageDots: false,
 });
-
-function getCurrentICatalogNav() {
-	$('.categoryElem').each(function(i, elem) {
-		if(getActiveICatalogNav('#'+$(this).attr('id'))) {
-			
-			if(slider.selectedIndex != i) {
-				let current = $(this).attr('id');
-				delActiveICatalogNav();
-				$('.slider a[href="#'+current+'"]').addClass('active');
-				slider.select(i);
-			}
-		}
-	});
-}
-
-function delActiveICatalogNav() {
-	$('.slider a').each(function() {
-		$(this).removeClass('active');
-	})
-}
 
 function getActiveICatalogNav(target) {
 	let w = $(window);
@@ -57,5 +36,17 @@ $("body").on('click', '[href*="#"]', function(e){
 });
 
 $(window).scroll(function(){
-	getCurrentICatalogNav();
+	$('.categoryElem').each(function(i, elem) {
+		if(getActiveICatalogNav('#'+$(this).attr('id'))) {
+			
+			if(slider.selectedIndex != i) {
+				let current = $(this).attr('id');
+				$('.slider a').each(function() {
+					$(this).removeClass('active');
+				})
+				$('.slider a[href="#'+current+'"]').addClass('active');
+				slider.select(i);
+			}
+		}
+	});
 });
