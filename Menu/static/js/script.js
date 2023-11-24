@@ -6,7 +6,7 @@ tg.enableClosingConfirmation();
 let app = $('#webapp');
 
 const Application = {
-	getCatalog () {
+	getICatalog () {
 		tg.MainButton.text = "Корзина";
 
 		let dataAjax = {
@@ -60,7 +60,7 @@ const Application = {
 				pageDots: false,
 			});
 		}
-		
+
 		function getCurrentICatalogNav() {
 			$('.categoryElem').each(function(i, elem) {
 				if(getActiveICatalogNav('#'+$(this).attr('id'))) {
@@ -1213,18 +1213,11 @@ function init() {
 	}
 
 	console.log(route);
-	
-
-	
 }
-
 
 $(window).on('load', function(){
 	init();
 });
-
-
-
 
 $('body').on('click', '.ajaxLink', function() {
 	let data = JSON.parse($(this).attr('data-ajax'));
