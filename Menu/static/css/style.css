@@ -108,7 +108,7 @@ body{
 	text-align: center;
 	border-radius: 5px;
 	color: var(--tg-theme-text-color);
-	background: var(--tg-theme-hint-color);
+	background: var(--tg-theme-dg-color);
 	line-height: 34px;
 	width: calc(40% - 10px);
 }
