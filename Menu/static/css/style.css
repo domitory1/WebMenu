@@ -83,13 +83,31 @@ body{
 }
 .btn-space{
 	padding: 0px 8px 7px 8px;
+	border: 1px solid red;
 }
+/*
 .btn-space button{
 	width: 100%;
-	padding: 8px 0px 8px 0px;
+	padding: 8px 0px;
 	border-radius: 5px;
 	font-size: 14px;
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
 	border: none;
+}
+*/
+.btn-space .buttonRemove{
+	border: 1px solid blue;
+	display: inline-block;
+	width: calc(30% - 20px);
+}
+.btn-space .quantity{
+	border: 1px solid blue;
+	display: inline-block;
+	width: calc(50% - 10px);
+}
+.btn-space .buttonAdd{
+	border: 1px solid blue;
+	display: inline-block;
+	width: calc(30% - 20px);
 }

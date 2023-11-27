@@ -48,11 +48,28 @@ $(window).scroll(function(){
 	});
 });
 
-$('body').on('click', '.buttonAdd"', function(e){
-	e.stopImmediatePropagation();
-	console.log("Нажатие на кнопку");
-	let card = $(this).parents('.cardProduct');
-	let id_product = $(this).attr('data-id');
-	let btnSpace = $(this).parents('.btn-space');
-	console.log(card, id_product, btnSpace);
+document.querySelector('.buttonAddToBasket').addEventListener('click', function(){
+	
+	let data = {
+		product_id: $(this).attr('data-id'),
+		product_price: $(this).attr('data-price'),
+	};
+
+	$.ajax({
+		url: '',
+		type: 'post',
+		data: data,
+		success: function(response){
+			tg.MainButton.text = "Корзина " + response.total;
+			
+		},
+		error: function(){
+			tg.showPopup({
+				title: '🤔',
+				message: "Возникла какая-то проблема. Уже работаем над ее решением"
+			  });
+		}
+	});
+
+	
 });
