@@ -82,10 +82,10 @@ body{
 	color: var(--tg-theme-hint-color);
 }
 .btn-space{
-	padding: 0px 8px 7px 8px;
-	border: 1px solid red;
+	margin: 0px 10px 7px 10px;
+	height: 34px;
 }
-/*
+
 .btn-space button{
 	width: 100%;
 	padding: 8px 0px;
@@ -95,19 +95,26 @@ body{
 	background: var(--tg-theme-button-color);
 	border: none;
 }
-*/
+
 .btn-space .buttonRemove{
-	border: 1px solid blue;
 	display: inline-block;
 	width: calc(30% - 20px);
+	margin-right: 20px;
+	color: var(--tg-theme-button-text-color);
+	background: var(--tg-theme-button-color);
 }
 .btn-space .quantity{
-	border: 1px solid blue;
 	display: inline-block;
-	width: calc(50% - 10px);
+	text-align: center;
+	border-radius: 5px;
+	background: var(--tg-theme-hint-color);
+	line-height: 34px;
+	width: calc(40% - 10px);
 }
 .btn-space .buttonAdd{
-	border: 1px solid blue;
 	display: inline-block;
 	width: calc(30% - 20px);
+	margin-left: 20px;
+	color: var(--tg-theme-button-text-color);
+	background: var(--tg-theme-button-color);
 }
