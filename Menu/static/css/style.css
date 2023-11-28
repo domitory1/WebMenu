@@ -85,7 +85,6 @@ body{
 	margin: 0px 10px 7px 10px;
 	height: 34px;
 }
-
 .btn-space button{
 	width: 100%;
 	padding: 8px 0px;
@@ -95,7 +94,6 @@ body{
 	background: var(--tg-theme-button-color);
 	border: none;
 }
-
 .btn-space .buttonRemove{
 	display: inline-block;
 	width: calc(30% - 20px);

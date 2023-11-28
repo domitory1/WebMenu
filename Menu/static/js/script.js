@@ -50,11 +50,15 @@ $(window).scroll(function(){
 
 document.querySelector('.buttonAddToBasket').addEventListener('click', function(){
 	
+	const buttons = '<button class="buttonRemove">-</button> <div class="quantity">1</div> <button class="buttonAdd">+</button>';
+	const btnSpace =  $(this).parents('btn-space');
+	btnSpace.html(buttons.html);
+
 	let data = {
 		product_id: $(this).attr('data-id'),
 		product_price: $(this).attr('data-price'),
 	};
-
+	
 	$.ajax({
 		url: '',
 		type: 'post',
@@ -62,7 +66,8 @@ document.querySelector('.buttonAddToBasket').addEventListener('click', function(
 		success: function(response){
 			tg.MainButton.text = "Корзина " + response.total;
 			
-		},
+		};
+		
 		error: function(){
 			tg.showPopup({
 				title: '🤔',
@@ -71,5 +76,4 @@ document.querySelector('.buttonAddToBasket').addEventListener('click', function(
 		}
 	});
 
-	
 });
