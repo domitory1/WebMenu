@@ -51,8 +51,8 @@ $(window).scroll(function(){
 document.querySelector('.buttonAddToBasket').addEventListener('click', function(){
 	
 	const buttons = '<button class="buttonRemove">-</button> <div class="quantity">1</div> <button class="buttonAdd">+</button>';
-	const btnSpace =  $(this).parents('btn-space');
-	btnSpace.html(buttons.html);
+	const btnSpace = $(this).parents('.btn-space');
+	btnSpace.html($(buttons));
 
 	/*
 	let data = {
