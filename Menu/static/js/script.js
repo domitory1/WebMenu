@@ -66,7 +66,7 @@ document.querySelector('.buttonAddToBasket').addEventListener('click', function(
 		success: function(response){
 			tg.MainButton.text = "Корзина " + response.total;
 			
-		};
+		},
 		
 		error: function(){
 			tg.showPopup({
