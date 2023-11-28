@@ -54,6 +54,7 @@ document.querySelector('.buttonAddToBasket').addEventListener('click', function(
 	const btnSpace =  $(this).parents('btn-space');
 	btnSpace.html(buttons.html);
 
+	/*
 	let data = {
 		product_id: $(this).attr('data-id'),
 		product_price: $(this).attr('data-price'),
@@ -75,5 +76,5 @@ document.querySelector('.buttonAddToBasket').addEventListener('click', function(
 			  });
 		}
 	});
-
+	*/
 });
