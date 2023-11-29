@@ -163,7 +163,7 @@ $('body').on('click', '.buttonAdd', function(e){
 		btnSpace.find('.quantity').val(value);
 	}
 });
-tg.MainButton.on('click', function(){
+tg.MainButton.onClick(function(){
 	tg.showPopup({
 		title: '🤔',
 		message: "Переход в корзину"
