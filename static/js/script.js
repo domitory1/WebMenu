@@ -168,4 +168,5 @@ tg.MainButton.on('click', function(){
 		title: '🤔',
 		message: "Переход в корзину"
 	});
+	window.location.href = 'https://domitory1.github.io/Basket//Basket.html';
 });
