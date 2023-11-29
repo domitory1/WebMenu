@@ -86,19 +86,20 @@ body{
 }
 .btn-space button{
 	width: 100%;
-	padding: 8px 0px;
+	padding: 8px 0;
 	border-radius: 5px;
 	font-size: 14px;
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
+	background-color: blue;
 	border: none;
 }
 .btn-space .buttonRemove{
 	display: inline-block;
-	width: calc(30% - 20px);
-	margin-right: 18px;
+	width: calc(30% - 5px);
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
+	background-color: blue;
 }
 .btn-space .quantity{
 	display: inline-block;
@@ -107,7 +108,8 @@ body{
 	border-radius: 5px;
 	color: var(--tg-theme-text-color);
 	background: var(--tg-theme-bg-color);
-	width: calc(40% - 10px);
+	background-color: rgb(149, 149, 210);
+	width: calc(40%);
 	padding: 8px 0px;
 }
 .btn-space .quantity:focus{
@@ -115,8 +117,8 @@ body{
 }
 .btn-space .buttonAdd{
 	display: inline-block;
-	width: calc(30% - 20px);
-	margin-left: 18px;
+	width: calc(30% - 5px);
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
+	background-color: blue;
 }
