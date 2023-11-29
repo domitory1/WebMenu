@@ -50,7 +50,7 @@ $(window).scroll(function(){
 
 $('body').on('click', '.buttonAddToBasket', function(e){
 	e.stopImmediatePropagation();
-	const buttons = '<button class="buttonRemove">-</button> <input class="quantity" readonly value = 4> <button class="buttonAdd">+</button>';
+	const buttons = '<button class="buttonRemove">-</button> <input class="quantity" readonly value = 1> <button class="buttonAdd">+</button>';
 	const btnSpace = $(this).parents('.btn-space');
 	btnSpace.html($(buttons));
 
@@ -80,23 +80,43 @@ $('body').on('click', '.buttonAddToBasket', function(e){
 });
 
 $('body').on('click', '.buttonRemove', function(e){
-	
+
 	e.stopImmediatePropagation();
 	const btnSpace = $(this).parents('.btn-space');
 	const quantity = btnSpace.find('.quantity').val();
-	value = quantity - 1;
+	value = Number(quantity) - 1;
 	let data = {
 		product_id: $(this).attr('data-id'),
 		product_quantity: value,
 	};
 
 	// query to server
-	
+
 	/*responce of server*/ 
 	if (value == 0){
 		btnSpace.html($('<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>'));
 	} else{
 		btnSpace.find('.quantity').val(value);
-		console.log(quantity);
+	}
+});
+
+$('body').on('click', '.buttonAdd', function(e){
+
+	e.stopImmediatePropagation();
+	const btnSpace = $(this).parents('.btn-space');
+	const quantity = btnSpace.find('.quantity').val();
+	value = Number(quantity) + 1;
+	let data = {
+		product_id: $(this).attr('data-id'),
+		product_quantity: value,
+	};
+
+	// query to server
+
+	/*responce of server*/ 
+	if (value == 0){
+		btnSpace.html($('<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>'));
+	} else{
+		btnSpace.find('.quantity').val(value);
 	}
 });
