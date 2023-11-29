@@ -97,23 +97,27 @@ body{
 .btn-space .buttonRemove{
 	display: inline-block;
 	width: calc(30% - 20px);
-	margin-right: 10px;
+	margin-right: 18px;
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
 }
 .btn-space .quantity{
 	display: inline-block;
 	text-align: center;
+	border: none;
 	border-radius: 5px;
 	color: var(--tg-theme-text-color);
 	background: var(--tg-theme-bg-color);
-	line-height: 34px;
 	width: calc(40% - 10px);
+	padding: 8px 0px;
+}
+.btn-space .quantity:focus{
+	outline: none;
 }
 .btn-space .buttonAdd{
 	display: inline-block;
 	width: calc(30% - 20px);
-	margin-left: 10px;
+	margin-left: 18px;
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
 }

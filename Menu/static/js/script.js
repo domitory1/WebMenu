@@ -48,9 +48,9 @@ $(window).scroll(function(){
 	});
 });
 
-document.querySelector('.buttonAddToBasket').addEventListener('click', function(){
-	
-	const buttons = '<button class="buttonRemove">-</button> <div class="quantity">1</div> <button class="buttonAdd">+</button>';
+$('body').on('click', '.buttonAddToBasket', function(e){
+	e.stopImmediatePropagation();
+	const buttons = '<button class="buttonRemove">-</button> <input class="quantity" readonly value = 4> <button class="buttonAdd">+</button>';
 	const btnSpace = $(this).parents('.btn-space');
 	btnSpace.html($(buttons));
 
@@ -75,6 +75,28 @@ document.querySelector('.buttonAddToBasket').addEventListener('click', function(
 				message: "Возникла какая-то проблема. Уже работаем над ее решением"
 			  });
 		}
-	});
-	*/
+	});*/
+	
+});
+
+$('body').on('click', '.buttonRemove', function(e){
+	
+	e.stopImmediatePropagation();
+	const btnSpace = $(this).parents('.btn-space');
+	const quantity = btnSpace.find('.quantity').val();
+	value = quantity - 1;
+	let data = {
+		product_id: $(this).attr('data-id'),
+		product_quantity: value,
+	};
+
+	// query to server
+	
+	/*responce of server*/ 
+	if (value == 0){
+		btnSpace.html($('<button class="buttonAddToBasket" data-id="1" data-price="660">660 ₽</button>'));
+	} else{
+		btnSpace.find('.quantity').val(value);
+		console.log(quantity);
+	}
 });
