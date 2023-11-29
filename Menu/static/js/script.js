@@ -49,6 +49,7 @@ $(window).scroll(function(){
 });
 
 $('body').on('click', '.buttonAddToBasket', function(e){
+
 	e.stopImmediatePropagation();
 	const buttons = '<button class="buttonRemove">-</button> <input class="quantity" readonly value = 1> <button class="buttonAdd">+</button>';
 	const btnSpace = $(this).parents('.btn-space');
@@ -90,7 +91,28 @@ $('body').on('click', '.buttonRemove', function(e){
 		product_quantity: value,
 	};
 
-	// query to server
+	/*
+	let data = {
+		product_id: $(this).attr('data-id'),
+		t
+	};
+	
+	$.ajax({
+		url: '',
+		type: 'post',
+		data: data,
+		success: function(response){
+			tg.MainButton.text = "Корзина " + response.total;
+			
+		},
+		
+		error: function(){
+			tg.showPopup({
+				title: '🤔',
+				message: "Возникла какая-то проблема. Уже работаем над ее решением"
+			  });
+		}
+	});*/
 
 	/*responce of server*/ 
 	if (value == 0){
@@ -111,7 +133,28 @@ $('body').on('click', '.buttonAdd', function(e){
 		product_quantity: value,
 	};
 
-	// query to server
+	/*
+	let data = {
+		product_id: $(this).attr('data-id'),
+		product_quantity: value,
+	};
+	
+	$.ajax({
+		url: '',
+		type: 'post',
+		data: data,
+		success: function(response){
+			tg.MainButton.text = "Корзина " + response.total;
+			
+		},
+		
+		error: function(){
+			tg.showPopup({
+				title: '🤔',
+				message: "Возникла какая-то проблема. Уже работаем над ее решением"
+			  });
+		}
+	});*/
 
 	/*responce of server*/ 
 	if (value == 0){
@@ -119,4 +162,10 @@ $('body').on('click', '.buttonAdd', function(e){
 	} else{
 		btnSpace.find('.quantity').val(value);
 	}
+});
+tg.MainButton.on('click', function(){
+	tg.showPopup({
+		title: '🤔',
+		message: "Переход в корзину"
+	});
 });
