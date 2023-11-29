@@ -91,7 +91,6 @@ body{
 	font-size: 14px;
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
-	background-color: blue;
 	border: none;
 }
 .btn-space .buttonRemove{
@@ -99,7 +98,6 @@ body{
 	width: calc(30% - 5px);
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
-	background-color: blue;
 }
 .btn-space .quantity{
 	display: inline-block;
@@ -108,7 +106,6 @@ body{
 	border-radius: 5px;
 	color: var(--tg-theme-text-color);
 	background: var(--tg-theme-bg-color);
-	background-color: rgb(149, 149, 210);
 	width: calc(40%);
 	padding: 8px 0px;
 }
@@ -120,5 +117,4 @@ body{
 	width: calc(30% - 5px);
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
-	background-color: blue;
 }
