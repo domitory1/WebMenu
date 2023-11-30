@@ -164,5 +164,5 @@ $('body').on('click', '.buttonAdd', function(e){
 	}
 });
 tg.MainButton.onClick(function(){
-	window.location.href = 'https://domitory1.github.io/Basket/Basket.html';
+	window.location.href = 'https://domitory1.github.io/Basket/basket.html';
 });
