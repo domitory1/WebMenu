@@ -19,4 +19,5 @@ body{
 .text{
     margin-top: 20px;
     text-align: center;
+    color: var(--tg-theme-text-color);
 }
