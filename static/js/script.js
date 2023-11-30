@@ -164,9 +164,5 @@ $('body').on('click', '.buttonAdd', function(e){
 	}
 });
 tg.MainButton.onClick(function(){
-	tg.showPopup({
-		title: '🤔',
-		message: "Переход в корзину"
-	});
 	window.location.href = 'https://domitory1.github.io/Basket/Basket.html';
 });
