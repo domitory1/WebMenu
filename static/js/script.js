@@ -47,7 +47,7 @@ tg.MainButton.onClick(function(){
       body: phoneMask.unmaskedValue
     })
     sessionStorage.setItem('number', phoneInput.value);
-    window.location.href = 'https://domitory1.github.io/cheakCode/SendCode.html';
+    window.location.href = 'https://domitory1.github.io/checkCode/SendCode.html';
   } else{
     phoneInput.classList.add('incorrectInput');
     p.classList.add('show');
