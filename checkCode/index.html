@@ -3,19 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <title>Auntification</title>
+    <title>Document</title>
     <link rel="stylesheet" href="static/style/style.css">
     <script src="static/js/telegram-web-app.js"></script>
-    <script src="static/js/jquery.min.js"></script>
 </head>
 <body>
-    <form action="#" method="post" id="form">
-        <h2>🥘 МЕРИДИАН</h2>
-        <p class="firstP">Номер телефона будет использоваться для входа в аккаунт системы меридиан</p>
-        <input type="tel" inputmode="tel" name="userPhoneNumber" value="" placeholder="Номер телефона" autocomplete="off">
-        <p class="secondP">* номер телефона введен неверно</p>
+    <h2>Введите код из смс</h2>
+    <p id="p"></p>
+    <form action="#" method="post">
+        <input type="tel" inputmode="numeric" maxlength="6" placeholder="Введите код" onfocus="this.placeholder=''" onblur="this.placeholder='Введите текст'" autocomplete="off">
     </form>
-    <script src="static/js/imask.js"></script>
     <script src="static/js/script.js"></script>
 </body>
 </html>

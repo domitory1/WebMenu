@@ -3,60 +3,53 @@ let tg = window.Telegram.WebApp;
 tg.ready();
 tg.expand();
 tg.enableClosingConfirmation();
-tg.MainButton.text = "Отправить код";
-tg.BackButton.show();
+tg.MainButton.text = "Подтвердить номер";
 tg.MainButton.show();
-tg.MainButton.hideProgress();
-tg.BackButton.onClick(function(){
-  tg.BackButton.hide();
-  window.history.back();
-})
 
-let passwordInput = document.querySelector('input');
-var number = sessionStorage.getItem('number');
-
-document.getElementById("p").innerHTML = `Отправили код на номер ${number}`;
-
+// Эта часть кода необходима для айфов. Без нее клавиатура не скрывается по нажанию вне поля input
+let flag = true;
 document.addEventListener( 'click', (e) => {
-	const withinBoundaries = e.composedPath().includes(passwordInput);
+	const withinBoundaries = e.composedPath().includes(phoneInput);
 	if (! withinBoundaries ) {
-		passwordInput.blur();
+		phoneInput.blur();
 	} else{
-    passwordInput.focus();
+    phoneInput.focus();
+    if (flag){
+      phoneInput.value = '+7 (';
+      flag = false;
+    }
   }
 });
 
-passwordInput.addEventListener('input', function(){
-  if (passwordInput.value.length == 6){
-    passwordInput.classList.add('correctInput');
-    passwordInput.classList.remove('incorrectInput');
+let phoneInput = document.querySelector('input');
+
+const phoneMask = new IMask(phoneInput, {
+  mask: "{+7} (000) 000-00-00"
+});
+
+phoneInput.addEventListener('input', function(){
+  if (phoneMask.masked.isComplete){
+    phoneInput.classList.add('correctInput');
+    phoneInput.classList.remove('incorrectInput');
+    p.classList.remove("show");
   } else{
-    passwordInput.classList.remove('correctInput');
+    phoneInput.classList.remove('correctInput');
   }
 });
+
+let p = document.querySelector('.secondP');
 
 tg.MainButton.onClick(function(){
-  passwordInput.blur();
-  if (passwordInput.classList.value == 'correctInput'){
-  console.log(passwordInput.value);
+  phoneInput.blur();
+  if (phoneInput.classList == 'correctInput'){
     fetch("send_msg.php", {
       method: "POST",
-      body: passwordInput.value
-    })  
-    let response = "true";
-    if (response == "true"){	
-      sessionStorage.removeItem('number');
-      window.location.href = 'https://domitory1.github.io/Menu/main.html';
-      tg.BackButton.hide();
-    } else{
-      tg.showPopup({
-        title: '😔 Ой',
-        message: "Введенный вами код не совпадает с тем, что мы вам отправили"
-      });
-      passwordInput.value = '';
-      passwordInput.classList.remove('correctInput');
-    }
-  }else{
-      passwordInput.classList.add('incorrectInput');
+      body: phoneMask.unmaskedValue
+    })
+    sessionStorage.setItem('number', phoneInput.value);
+    window.location.href = 'https://domitory1.github.io/Auntification/SendCode.html';
+  } else{
+    phoneInput.classList.add('incorrectInput');
+    p.classList.add('show');
   }
 });
