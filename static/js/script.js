@@ -5,7 +5,6 @@ tg.expand();
 tg.enableClosingConfirmation();
 tg.MainButton.text = "Подтвердить номер";
 tg.MainButton.show();
-tg.BackButton.show();
 
 // Эта часть кода необходима для айфов. Без нее клавиатура не скрывается по нажанию вне поля input
 let flag = true;
@@ -52,11 +51,9 @@ tg.MainButton.onClick(function(){
   } else{
     phoneInput.classList.add('incorrectInput');
     if (phoneInput.value == ""){
-      p[0].innerHTML = "Введите номер телефона";
-      p.classList.add('show');
+      console.log("Пустая строка");
    } else{
-    p[0].innerHTML = "Введите номер телефона";
-    p.classList.add('show');
+    console.log("Номер телефона введен неправильно");
    }
   }
 });
