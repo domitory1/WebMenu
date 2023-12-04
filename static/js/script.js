@@ -51,6 +51,7 @@ tg.MainButton.onClick(function(){
     window.location.href = 'https://domitory1.github.io/checkCode/SendCode.html';
   } else{
     phoneInput.classList.add('incorrectInput');
+    console.log(phoneInput.value);
     if (phoneInput.value == ''){
       p[0].innerHtml = "Введите номер телефона";
       p.classList.add('show');
