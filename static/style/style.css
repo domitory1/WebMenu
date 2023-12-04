@@ -44,7 +44,7 @@ input:focus{
 .incorrectInput{
 	border: 2px solid red;
 }
-p.secondP{
+.p{
 	opacity: 0;
 	transition: opacity 220ms ease-in-out;
 	text-align: left;
@@ -53,6 +53,6 @@ p.secondP{
 	font-size: 14px;
 	color: var(--tg-theme-hint-color);
 }
-p.secondP.show{
+.p.show{
 	opacity: 1;
 }
