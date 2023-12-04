@@ -101,13 +101,13 @@ body{
 }
 .btn-space .quantity{
 	display: inline-block;
+	width: calc(40%);
+	padding: 8px 0px;
 	text-align: center;
 	border: none;
 	border-radius: 5px;
 	color: var(--tg-theme-text-color);
 	background: var(--tg-theme-bg-color);
-	width: calc(40%);
-	padding: 8px 0px;
 }
 .btn-space .quantity:focus{
 	outline: none;
