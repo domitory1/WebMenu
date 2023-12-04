@@ -6,7 +6,6 @@ tg.enableClosingConfirmation();
 tg.MainButton.text = "Подтвердить номер";
 tg.MainButton.show();
 
-// Эта часть кода необходима для айфов. Без нее клавиатура не скрывается по нажанию вне поля input
 let flag = true;
 document.addEventListener( 'click', (e) => {
 	const withinBoundaries = e.composedPath().includes(phoneInput);

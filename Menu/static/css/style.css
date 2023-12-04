@@ -107,7 +107,7 @@ body{
 	border: none;
 	border-radius: 5px;
 	color: var(--tg-theme-text-color);
-	background: var(--tg-theme-bg-color);
+	background: var(--tg-theme-secondary-bg-color);
 }
 .btn-space .quantity:focus{
 	outline: none;
