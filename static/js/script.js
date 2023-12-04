@@ -37,7 +37,7 @@ phoneInput.addEventListener('input', function(){
   }
 });
 
-let p = document.getElementsByClassName('.p');
+let p = document.querySelector('.p');
 
 tg.MainButton.onClick(function(){
   phoneInput.blur();
@@ -52,6 +52,7 @@ tg.MainButton.onClick(function(){
     phoneInput.classList.add('incorrectInput');
     if (phoneInput.value == ""){
       console.log("Пустая строка");
+      console.log(p.append("Введите номер телефона"));
    } else{
     console.log("Номер телефона введен неправильно");
    }
