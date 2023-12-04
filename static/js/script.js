@@ -52,9 +52,12 @@ tg.MainButton.onClick(function(){
     phoneInput.classList.add('incorrectInput');
     if (phoneInput.value == ""){
       console.log("Пустая строка");
-      console.log(p.append("Введите номер телефона"));
+      p.append("Введите номер телефона");
+      console.log(p.value);
    } else{
-    console.log("Номер телефона введен неправильно");
+    console.log("Неправильныый ввод");
+    p.append("Номер телефона введен неправильно");
+    console.log(p.value);
    }
   }
 });
