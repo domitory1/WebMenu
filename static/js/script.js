@@ -51,12 +51,10 @@ tg.MainButton.onClick(function(){
   } else{
     phoneInput.classList.add('incorrectInput');
     if (phoneInput.value == ""){
-      console.log("Пустая строка");
-      p.append("Введите номер телефона");
+      p.html("Введите номер телефона");
       p.classList.add('show');
    } else{
-    console.log("Неправильныый ввод");
-    p.append("Номер телефона введен неправильно");
+    p.html("Номер телефона введен неправильно");
     p.classList.add('show');
    }
   }
