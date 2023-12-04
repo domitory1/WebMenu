@@ -54,6 +54,9 @@ tg.MainButton.onClick(function(){
     if (phoneInput.value == ''){
       p[0].innerHtml = "Введите номер телефона";
       p.classList.add('show');
-    }
+   } else{
+    p[0].innerHtml = "Номер телефон введен неверно";
+    p.classList.add('show');
+   }
   }
 });
