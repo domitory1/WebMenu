@@ -53,11 +53,11 @@ tg.MainButton.onClick(function(){
     if (phoneInput.value == ""){
       console.log("Пустая строка");
       p.append("Введите номер телефона");
-      console.log(p.value);
+      p.classList.add('show');
    } else{
     console.log("Неправильныый ввод");
     p.append("Номер телефона введен неправильно");
-    console.log(p.value);
+    p.classList.add('show');
    }
   }
 });
