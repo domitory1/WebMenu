@@ -38,7 +38,7 @@ phoneInput.addEventListener('input', function(){
   }
 });
 
-let p = document.querySelector('.secondP');
+let p = document.querySelector('.p');
 
 tg.MainButton.onClick(function(){
   phoneInput.blur();
@@ -51,6 +51,9 @@ tg.MainButton.onClick(function(){
     window.location.href = 'https://domitory1.github.io/checkCode/SendCode.html';
   } else{
     phoneInput.classList.add('incorrectInput');
-    p.classList.add('show');
+    if (phoneInput.value == ''){
+      p[0].innerHtml = "Введите номер телефона";
+      p.classList.add('show');
+    }
   }
 });
