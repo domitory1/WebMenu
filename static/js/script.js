@@ -51,12 +51,11 @@ tg.MainButton.onClick(function(){
     window.location.href = 'https://domitory1.github.io/checkCode/SendCode.html';
   } else{
     phoneInput.classList.add('incorrectInput');
-    console.log(phoneInput.value);
     if (phoneInput.value == ""){
-      p[0].innerHtml = "Введите номер телефона";
+      p[0].innerHTML = "Введите номер телефона";
       p.classList.add('show');
    } else{
-    p[0].innerHtml = "Номер телефон введен неверно";
+    p[0].innerHTML = "Введите номер телефона";
     p.classList.add('show');
    }
   }
