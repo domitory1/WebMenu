@@ -32,7 +32,7 @@ img{
 	object-fit: cover;
 }
 .name{
-	font-size: 14px;
+	font-size: 16px;
 }
 .cell0{
 	display: grid;
@@ -55,6 +55,8 @@ img{
 .btn-space .buttonRemove{
 	display: inline-block;
 	padding: 8px 0;
+	font-size: 16px;
+	font-weight: bold;
 	border-radius: 5px;
 	border: none;
 	width: calc(30% - 5px);
@@ -65,6 +67,7 @@ img{
 	display: inline-block;
 	width: calc(40%);
 	padding: 8px 0px;
+	font-size: 16px;
 	text-align: center;
 	border: none;
 	border-radius: 5px;
@@ -77,6 +80,8 @@ img{
 .btn-space .buttonAdd{
 	display: inline-block;
 	padding: 8px 0;
+	font-size: 16px;
+	font-weight: bold;
 	border-radius: 5px;
 	border: none;
 	width: calc(30% - 5px);
