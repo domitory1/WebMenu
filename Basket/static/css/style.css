@@ -33,7 +33,6 @@ img{
 }
 .name{
 	font-size: 14px;
-	white-space: nowrap;
 }
 .cell0{
 	display: grid;
@@ -41,7 +40,7 @@ img{
 }
 .cell1{
 	display: grid;
-	grid-template-columns: 1fr 1fr;
+	grid-template-columns: 1fr 40%;
 }
 .cell4{
 	text-align: center;
