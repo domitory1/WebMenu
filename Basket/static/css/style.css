@@ -1,7 +1,6 @@
 body{
 	font-size: 1rem;
 	margin: 0px;
-	padding-bottom: 10px;
 	color: var(--tg-theme-text-color);
 	background-color: var(--tg-theme-bg-color);
 	font-family: system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",
@@ -11,13 +10,61 @@ body{
 ::-webkit-scrollbar{
 	width: 0;
 }
+
 .mottled_basked{
     margin-top: 100px;
     width: 100%;
     text-align: center;
 }
-.text{
-    margin-top: 20px;
-    text-align: center;
-    color: var(--tg-theme-text-color);
+.listItem{
+	border: 1px solid red;
+}
+.listItemImg{
+	display: inline-block;
+	width: 15%;
+	border: 1px solid blue;
+}
+img{
+	width: 100%;
+}
+.listItemDiscription{
+	display: inline-block;
+	width: 65%;
+	border: 1px solid blue;
+}
+h3{
+	margin: 0;
+}
+p{
+	margin: 0;
+}
+.listItemPrice{
+	display: inline-block;
+	width: 17%;
+	border: 1px solid blue;
+}
+.btn-space .buttonRemove{
+	display: inline-block;
+	width: calc(30% - 5px);
+	color: var(--tg-theme-button-text-color);
+	background: var(--tg-theme-button-color);
+}
+.btn-space .quantity{
+	display: inline-block;
+	width: calc(40%);
+	padding: 8px 0px;
+	text-align: center;
+	border: none;
+	border-radius: 5px;
+	color: var(--tg-theme-text-color);
+	background: var(--tg-theme-secondary-bg-color);
+}
+.btn-space .quantity:focus{
+	outline: none;
+}
+.btn-space .buttonAdd{
+	display: inline-block;
+	width: calc(30% - 5px);
+	color: var(--tg-theme-button-text-color);
+	background: var(--tg-theme-button-color);
 }
