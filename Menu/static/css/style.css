@@ -89,7 +89,6 @@ body{
 	padding: 8px 0;
 	border-radius: 5px;
 	font-size: 14px;
-	font-weight: bold;
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
 	border: none;
@@ -97,6 +96,8 @@ body{
 .btn-space .buttonRemove{
 	display: inline-block;
 	width: calc(30% - 5px);
+	font-size: 16px;
+	font-weight: bold;
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
 }
@@ -117,6 +118,7 @@ body{
 .btn-space .buttonAdd{
 	display: inline-block;
 	width: calc(30% - 5px);
+	font-size: 16px;
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
 }
