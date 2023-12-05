@@ -16,36 +16,43 @@ body{
     width: 100%;
     text-align: center;
 }
-
 .listItem{
 	padding: 10px 10px 0 10px;
+	display: grid;
+	grid-template-columns: 1fr 4fr;
 }
 .listItemImg{
-	display: inline-block;
+	width: 90px;
+	height: 80px;
+}
+img{
 	width: 80px;
 	height: 80px;
 	border-radius: 8px;
-	overflow: hidden;
-}
-img{
-	width: 100%;
-	height: 100%;
 	object-fit: cover;
-}
-.listItemDiscription{
-	display: inline-block;
-	vertical-align: top;
 }
 .name{
 	font-size: 14px;
+	white-space: nowrap;
+}
+.cell0{
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+}
+.cell1{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+.cell4{
+	text-align: center;
 }
 .discription{
 	font-size: 12px;
 }
-.listItemPrice{
-	display: inline-block;
-	vertical-align: top;
-}/*
+.btn-space{
+	width: 40%;
+	margin-left: auto;
+}
 .btn-space .buttonRemove{
 	display: inline-block;
 	width: calc(30% - 5px);
