@@ -55,6 +55,9 @@ img{
 }
 .btn-space .buttonRemove{
 	display: inline-block;
+	padding: 8px 0;
+	border-radius: 5px;
+	border: none;
 	width: calc(30% - 5px);
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
@@ -74,6 +77,9 @@ img{
 }
 .btn-space .buttonAdd{
 	display: inline-block;
+	padding: 8px 0;
+	border-radius: 5px;
+	border: none;
 	width: calc(30% - 5px);
 	color: var(--tg-theme-button-text-color);
 	background: var(--tg-theme-button-color);
