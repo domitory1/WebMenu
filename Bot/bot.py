@@ -1,23 +1,40 @@
-from aiogram import Bot, Dispatcher, executor, types
-from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, WebAppInfo
+import asyncio
+import logging
+import sys
+import time
 
-API_TOKEN = '6658531652:AAEn5TRw5p4yHulphWYttyNfr2bQecvDNvU'
+from aiogram import Bot, Dispatcher, Router, F
+from aiogram.enums import ParseMode
+from aiogram.filters import CommandStart
+from aiogram.types import Message
+from aiogram.utils.markdown import hbold
 
-bot = Bot(token=API_TOKEN)
-dp = Dispatcher(bot)
+import Button.button as button
 
-inline_btn = InlineKeyboardButton("Меню", web_app=WebAppInfo(url='https://domitory1.github.io/index.html'), callback_data = 'menu')
-inline_kb = InlineKeyboardMarkup().add(inline_btn)
+API_TOKEN = "6658531652:AAEn5TRw5p4yHulphWYttyNfr2bQecvDNvU"
 
-@dp.message_handler(commands=['start'])
-async def send_welcome(message: types.Message):
-   await message.answer("Привет")
-   await message.answer("Выберите интересующий раздел", reply_markup=inline_kb)
+dp = Dispatcher()
+router = Router()
 
-@dp.callback_query_handler(lambda c: c.data == 'menu')
-async def open_menu(callback_query: types.CallbackQuery):
-   await bot.answer_callback_query(callback_query.id)
-   await bot.send_message(callback_query.from_user.id, "Нажата кнопка «Меню»")
+@dp.message(CommandStart())
+async def command_start_handler(message: Message) -> None:
+   await message.answer("Добрый день! 😊")
+   time.sleep(2)
+   # !Заменить имя бота
+   await message.answer("Меня зовут WebAppTestBot.\n Я был создан командой 12XT для того, "
+                        "чтобы вы могли сделать удаленный заказ в студенческой столовой Меридиан.")
+   time.sleep(2)
+   await message.answer("Перед тем, как вы сделаете ваш первый заказ, поделитесь, пожалуйста, своим номером телефона. 😌\n\n"
+                        "Он нужен для того, чтобы вы смогли получить свой заказ.", reply_markup=button.reply_number_phone)
 
-if __name__ == '__main__':
-   executor.start_polling(dp, skip_updates=True)
+@router.message.contact()
+async def contact_handler(message: Message):
+    await message.answer("Работает")
+
+async def main() -> None:
+   bot = Bot(API_TOKEN, parse_mode=ParseMode.HTML)
+   await dp.start_polling(bot)
+
+if __name__ == "__main__":
+   logging.basicConfig(level=logging.INFO, stream=sys.stdout)
+   asyncio.run(main())
