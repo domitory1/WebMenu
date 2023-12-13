@@ -49,13 +49,12 @@ $(window).scroll(function(){
 });
 
 $('body').on('click', '.buttonAddToBasket', function(e){
-
 	e.stopImmediatePropagation();
 	const buttons = '<button class="buttonRemove">-</button> <input class="quantity" readonly value = 1> <button class="buttonAdd">+</button>';
 	const btnSpace = $(this).parents('.btn-space');
+	const number = 89026728466;
 	btnSpace.html($(buttons));
 
-	/*
 	let data = {
 		product_id: $(this).attr('data-id'),
 		product_price: $(this).attr('data-price'),
@@ -76,7 +75,7 @@ $('body').on('click', '.buttonAddToBasket', function(e){
 				message: "Возникла какая-то проблема. Уже работаем над ее решением"
 			  });
 		}
-	});*/
+	});
 	
 });
 
@@ -89,12 +88,6 @@ $('body').on('click', '.buttonRemove', function(e){
 	let data = {
 		product_id: $(this).attr('data-id'),
 		product_quantity: value,
-	};
-
-	/*
-	let data = {
-		product_id: $(this).attr('data-id'),
-		t
 	};
 	
 	$.ajax({
@@ -112,7 +105,7 @@ $('body').on('click', '.buttonRemove', function(e){
 				message: "Возникла какая-то проблема. Уже работаем над ее решением"
 			  });
 		}
-	});*/
+	});
 
 	/*responce of server*/ 
 	if (value == 0){
@@ -132,12 +125,6 @@ $('body').on('click', '.buttonAdd', function(e){
 		product_id: $(this).attr('data-id'),
 		product_quantity: value,
 	};
-
-	/*
-	let data = {
-		product_id: $(this).attr('data-id'),
-		product_quantity: value,
-	};
 	
 	$.ajax({
 		url: '',
@@ -154,7 +141,7 @@ $('body').on('click', '.buttonAdd', function(e){
 				message: "Возникла какая-то проблема. Уже работаем над ее решением"
 			  });
 		}
-	});*/
+	});
 
 	/*responce of server*/ 
 	if (value == 0){
