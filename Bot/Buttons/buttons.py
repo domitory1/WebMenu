@@ -1,7 +1,7 @@
 from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyboardMarkup, KeyboardButton, WebAppInfo
 
 
-reply_number_phone = ReplyKeyboardMarkup(resize_keyboard=True, keyboard=[
+application_number_phone = ReplyKeyboardMarkup(resize_keyboard=True, keyboard=[
    [KeyboardButton(text="Поделиться номером", request_contact=True)]
 ])
 
